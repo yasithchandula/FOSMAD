@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "471043914450",
+    "firebase_url": "https://fosmad-11fd2-default-rtdb.firebaseio.com",
+    "project_id": "fosmad-11fd2",
+    "storage_bucket": "fosmad-11fd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471043914450:android:465432e00b02bcc9eb0b0b",
+        "android_client_info": {
+          "package_name": "com.example.fosmad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471043914450-0rf4n2rq4khhq5dt5dijorqfv4s8beeq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB46VqEh-ptnTFX-5n_a4k2hbXO6GXDE30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471043914450-0rf4n2rq4khhq5dt5dijorqfv4s8beeq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
