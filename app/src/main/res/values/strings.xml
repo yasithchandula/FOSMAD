@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">FOSMAD</string>
+
+    <string name="iv_mainlogo">logo</string>
+    <string name="pt_searchbar">Search</string>
+    <string name="btn_cat_tea">TEA</string>
+    <string name="btn_cat_coffee">COFFEE</string>
+    <string name="btn_cat_juice">JUICE</string>
+    <string name="btn_cat_smoothie">SMOOTHIES</string>
+    <string name="pt_pdname">Bubble Tea</string>
+    <string name="pt_cat_view_tea">TEA</string>
+    <string name="btn_addtocart">Add to Cart</string>
+    <string name="pt_reviews">"Reviews "</string>
+    <string name="tl_inputname"> Enter Name </string>
+    <string name="til_pnameinput">Enter Name</string>
+    <string name="pt_input_p_name">Enter Product Name</string>
+    <string name="til_category_select">Select Category</string>
+    <string name="actv_categoryselect">Select Category</string>
+    <string name="pt_input_price">Enter Price</string>
+    <string name="pt_input_description">Enter Description</string>
+    <string name="tvuploadimage">Upload Image</string>
+    <string name="btn_reset_additem">Reset</string>
+    <string name="btn_submit_additem">Add Item</string>
+    <string name="tv_allitem_list">All Item List</string>
+    <string name="tv_list_name">Milk Coffee</string>
+    <string name="tv_list_details">Description</string>
+    <string name="btn_list_edit_remove">Edit/Remove</string>
+    <string name="btn_pview_edit">edit</string>
+    <string name="btn_pview_delete">delete</string>
+    <string name="btn_submit_editform">edit</string>
+    <string name="btn_reset_editform">reset</string>
+
+
 </resources>
