@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">FOSMAD</string>
+    <string name="tv_cart_head">My Cart</string>
+    <string name="tv_sub">Sub total :</string>
+    <string name="tv_subPrice">Rs.</string>
+    <string name="tv_discount">Discounts :</string>
+    <string name="tv_disPrice">Rs.</string>
+    <string name="btn_checkout">CHECKOUT</string>
+    <string name="tv_total">Total :</string>
+    <string name="tv_tPrice">Rs.</string>
+    <string name="tv_rs1">Rs.</string>
+    <string name="tv_priceEach">0</string>
+    <string name="tv_priceTotal">0</string>
+    <string name="tv_rs2">Rs.</string>
+    <string name="tv_itemQty">1</string>
+    <string name="tv_itemTitle">Title</string>
+    <string name="img_cart1">added item cart image</string>
+    <string name="btn_minus">quantity decrement button</string>
+    <string name="btn_plus">quantity increment button</string>
+    <string name="tv_offerTitle">Offer Title</string>
+    <string name="et_offTitle" />
+    <string name="tv_offerPrice">Offer Price</string>
+    <string name="et_offPrice" />
+    <string name="tv_offerDescription">Offer Description</string>
+    <string name="et_offerDes" />
+    <string name="tv_offerHead">OFFERS</string>
+    <string name="img_off1">offer image 1</string>
+    <string name="tv_off_title">offer title</string>
+    <string name="tv_uploadimg">Upload an image</string>
+    <string name="btn_publish">PUBLISH</string>
 </resources>
