@@ -48,21 +48,21 @@
 <!--        app:layout_constraintTop_toBottomOf="@+id/pt_input_p_name" />-->
 
     <EditText
-            android:id="@+id/pt_input_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/inputblock"
-            android:ems="10"
-            android:hint="@string/pt_input_price"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.278"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pt_input_p_name" />
+        android:id="@+id/pt_input_price"
+        android:layout_width="294dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/inputblock"
+        android:ems="10"
+        android:hint="@string/pt_input_price"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pt_input_p_name" />
 
-        <EditText
+    <EditText
             android:id="@+id/pt_input_description"
             android:layout_width="306dp"
             android:layout_height="119dp"
@@ -75,9 +75,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.533"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pt_input_price" />
+            app:layout_constraintTop_toBottomOf="@id/sp_category" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/ibtn_uploadimage"
             android:layout_width="79dp"
             android:layout_height="72dp"
@@ -128,5 +128,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ibtn_uploadimage" />
 
+    <ProgressBar
+        android:id="@+id/pb_additem"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibtn_uploadimage" />
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/sp_card"-->
+<!--        android:layout_width="240dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/pt_input_description"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/pt_input_price"-->
+<!--        tools:layout_editor_absoluteX="57dp">-->
+
+    <Spinner
+        android:id="@+id/sp_category"
+        android:layout_width="223dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/inputblock"
+        app:layout_constraintBottom_toTopOf="@id/pt_input_description"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pt_input_price" />
+    <!--    </androidx.cardview.widget.CardView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
