@@ -3,7 +3,7 @@ package com.example.fosmad;
 public class Offers {
 
     String offerTitle;
-    String offerPrice;
+    Float offerPrice;
     String offerDescription;
     String offerImage;
 
@@ -24,7 +24,7 @@ public class Offers {
         this.offerImage = offerImage;
     }
 
-    public Offers(String offerTitle, String offerPrice, String offerDescription) {
+    public Offers(String offerTitle, Float offerPrice, String offerDescription) {
         this.offerTitle = offerTitle;
         this.offerPrice = offerPrice;
         this.offerDescription = offerDescription;
@@ -39,11 +39,11 @@ public class Offers {
         this.offerTitle = offerTitle;
     }
 
-    public String getOfferPrice() {
+    public Float getOfferPrice() {
         return offerPrice;
     }
 
-    public void setOfferPrice(String offerPrice) {
+    public void setOfferPrice(Float offerPrice) {
         this.offerPrice = offerPrice;
     }
 
