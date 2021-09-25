@@ -5,35 +5,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home"
-    android:background="#FFEDEDED">
+    >
+<!--    android:background="#FFEDEDED"-->
+
+    <ImageView
+        android:id="@+id/logohome"
+        android:layout_width="411dp"
+        android:layout_height="111dp"
+        android:src="@drawable/cafebean"
+        app:layout_constraintBottom_toTopOf="@id/search_cardview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/search_cardview"
-        android:layout_width="207dp"
-        android:layout_height="49dp"
+        android:layout_width="295dp"
+        android:layout_height="48dp"
         android:layout_margin="16dp"
-        app:cardCornerRadius="8dp"
+        app:cardCornerRadius="18dp"
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/logohome">
 
-        <EditText
+        <!--        <EditText-->
+        <!--            android:id="@+id/pt_searchbar"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+
+        <!--            android:background="@drawable/searchbar"-->
+        <!--            android:drawableStart="@drawable/ic_baseline_search_24"-->
+        <!--            android:drawablePadding="12dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:hint="@string/pt_searchbar"-->
+        <!--            android:inputType="textPersonName"-->
+        <!--            android:minHeight="48dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            tools:layout_editor_absoluteY="46dp"-->
+        <!--            />-->
+        <SearchView
             android:id="@+id/pt_searchbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
 
-            android:background="@drawable/searchbar"
+            android:contextClickable="true"
             android:drawableStart="@drawable/ic_baseline_search_24"
             android:drawablePadding="12dp"
-            android:ems="10"
-            android:hint="@string/pt_searchbar"
-            android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:queryHint="Search"
+            android:tooltipText="Search"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="46dp"
-            />
+            tools:layout_editor_absoluteY="46dp">
+
+        </SearchView>
 
     </androidx.cardview.widget.CardView>
 <!--    <androidx.cardview.widget.CardView-->
@@ -49,8 +76,8 @@
 
     <HorizontalScrollView
         android:id="@+id/sv_category"
-        android:layout_width="411dp"
-        android:layout_height="117dp"
+        android:layout_width="412dp"
+        android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
@@ -134,7 +161,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/itemlist"
         android:layout_width="413dp"
-        android:layout_height="405dp"
+        android:layout_height="342dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sv_category" />
