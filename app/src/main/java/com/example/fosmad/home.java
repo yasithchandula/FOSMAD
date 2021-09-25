@@ -49,6 +49,7 @@ public class home extends AppCompatActivity {
                     item item=dataSnapshot.getValue(item.class);
                     list.add(item);
                 }
+                itmadapter.notifyDataSetChanged();
             }
 
             @Override
