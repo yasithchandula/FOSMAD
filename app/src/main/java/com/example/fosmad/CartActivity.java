@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Adapter;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,34 +16,36 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class OffersActivity extends AppCompatActivity {
+public class CartActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    ArrayList<Offers> List;
-    OfferAdapter adapter;
+    ArrayList<CartItems> CList;
+    CartAdapter adapter;
 
-    DatabaseReference DBref;
+    DatabaseReference DbRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_offers);
+        setContentView(R.layout.activity_cart);
 
         recyclerView = findViewById(R.id.recyclerview_offers);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        List = new ArrayList<>();
-        adapter = new OfferAdapter(this, List);
+        CList = new ArrayList<>();
+        adapter = new CartAdapter(this, CList);
         recyclerView.setAdapter(adapter);
 
-        DBref = FirebaseDatabase.getInstance().getReference("Offers");
+        DbRef = FirebaseDatabase.getInstance().getReference("Cart/User/Items");
 
-        DBref.addValueEventListener(new ValueEventListener() {
+        DbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    Offers offer = dataSnapshot.getValue(Offers.class);
-                    List.add(offer);
+                    Log.d("mytest", "done");
+                    CartItems cartList = dataSnapshot.getValue(CartItems.class);
+                    Log.d("mytest", dataSnapshot.getKey());
+                    CList.add(cartList);
                 }
                 adapter.notifyDataSetChanged();
             }

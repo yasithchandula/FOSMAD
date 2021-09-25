@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
@@ -92,7 +93,7 @@ public class AddOfferActivity extends AppCompatActivity {
 
     private void InsertOfferData() {
         String offerTitle = txt_title.getText().toString();
-        String offerPrice = txt_price.getText().toString();
+        Float offerPrice = Float.valueOf(txt_price.getText().toString().trim());
         String offerDescription = txt_description.getText().toString();
 
 

@@ -2,6 +2,7 @@ package com.example.fosmad;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,10 +45,12 @@ public class OfferAdapter extends RecyclerView.Adapter<OfferAdapter.OfferViewHol
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d("mytest", "ONclick");
                 Intent intent = new Intent(view.getContext(), ViewOfferActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("Title", offset.getOfferTitle());
-                intent.putExtra("Price", offset.getOfferPrice());
+                Log.d("mytest", offset.getOfferTitle());
+                intent.putExtra("Price", offset.getOfferPrice().toString());
                 intent.putExtra("Description", offset.getOfferDescription());
                 intent.putExtra("OfferImage", offset.getOfferImage());
 
