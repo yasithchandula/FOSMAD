@@ -1,24 +1,41 @@
 package com.example.fosmad;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    Button btnLogOut;
+    FirebaseAuth mAuth;
+//create
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
+        btnLogOut = findViewById(R.id.btnLogout);
+        mAuth = FirebaseAuth.getInstance();
 
-        myRef.setValue("Hello, World!");
+        btnLogOut.setOnClickListener(view ->{
+            mAuth.signOut();
+            startActivity(new Intent(MainActivity.this, activity_login.class));
+        });
+
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user == null){
+            startActivity(new Intent(MainActivity.this, activity_login.class));
+        }
+    }
 }
