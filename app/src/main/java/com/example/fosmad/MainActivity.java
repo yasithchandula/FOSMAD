@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.EditText;
+
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -27,6 +30,16 @@ public class MainActivity extends AppCompatActivity {
             mAuth.signOut();
             startActivity(new Intent(MainActivity.this, activity_login.class));
         });
+
+
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef ;
+//        = database.getReference("message");
+
+
+
+//        myRef.setValue("Hello, World!");
 
     }
 
