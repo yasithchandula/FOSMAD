@@ -20,7 +20,6 @@
             android:orientation="vertical">
             <ImageView
                 android:id="@+id/iv_itemdetimage"
-                android:background="@drawable/ic_baseline_camera_alt_24"
                 android:layout_width="250dp"
                 android:layout_height="250dp"
                 android:layout_marginTop="25dp"
@@ -33,7 +32,8 @@
                 android:text="Item Name"
                 android:textSize="25dp"
                 android:textStyle="bold"
-                android:textAlignment="center"/>
+                android:layout_marginLeft="35dp"
+                />
             <TextView
                 android:id="@+id/tv_itdet_price"
                 android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                 android:text="Price : "
                 android:textSize="25dp"
                 android:textStyle="bold"
-                android:textAlignment="center"/>
+                android:layout_marginLeft="35dp"/>
 
             <TextView
                 android:id="@+id/tv_itdet_description"
@@ -50,13 +50,13 @@
                 android:layout_marginTop="25dp"
                 android:text="Description : "
                 android:textSize="18dp"
-                android:textAlignment="center"/>
+                android:layout_marginLeft="35dp"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Add to Cart"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="35dp"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
