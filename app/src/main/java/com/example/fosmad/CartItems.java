@@ -1,10 +1,23 @@
 package com.example.fosmad;
 
+import com.google.firebase.database.Exclude;
+
 public class CartItems {
     String productName;
     Float productPrice;
     Integer productQty;
     String ItemImage;
+
+    @Exclude
+    String itemKey;
+
+    public String getItemKey() {
+        return itemKey;
+    }
+
+    public void setItemKey(String itemKey) {
+        this.itemKey = itemKey;
+    }
 
     public CartItems() {}
     public CartItems(String productName, Float productPrice, int productQty, String itemImage) {
