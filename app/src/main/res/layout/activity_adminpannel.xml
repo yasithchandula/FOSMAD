@@ -7,6 +7,8 @@
     tools:context=".adminpannel"
     android:background="@drawable/background">
 
+    <include layout="@layout/custom_toolbar"/>
+
     <TextView
         android:id="@+id/admintitle"
         android:layout_width="wrap_content"
@@ -15,10 +17,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="113dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="108dp"
         android:gravity="center"
-        android:text="Admin Pannel"
+        android:text="Admin Panel"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -30,7 +32,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="107dp"
         android:background="@drawable/cafe" />
 
@@ -39,11 +41,14 @@
         android:layout_width="392dp"
         android:layout_height="427dp"
         android:layout_below="@id/admintitle"
-        android:layout_marginTop="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="12dp"
         android:columnCount="2"
         android:rowCount="3">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_admin_additem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -52,6 +57,7 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:layout_margin="15dp"
+            android:clickable="true"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
@@ -65,8 +71,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/additemadmin"
-                    />
+                    android:src="@drawable/additemadmin" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -77,6 +82,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_admin_viewitem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -98,12 +104,12 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_home_24" />
+                    android:src="@drawable/ic_baseline_list_24" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Home" />
+                    android:text="Item List" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -131,12 +137,12 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_home_24" />
+                    android:src="@drawable/ic_baseline_local_fire_department_35" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Home" />
+                    android:text="Add Offer" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -163,12 +169,12 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_home_24" />
+                    android:src="@drawable/ic_baseline_pageview_35" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Home" />
+                    android:text="View Offer" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -183,7 +189,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="149dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="148dp"
         android:text="Logout" />
 
