@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".AddOfferActivity">
+    <include layout="@layout/custom_toolbar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,6 +43,9 @@
             android:id="@+id/et_offTitle"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:hint="Enter offer title here"
             android:background="@drawable/edittext"
             tools:ignore="SpeakableTextPresentCheck"
             tools:text="@string/et_offTitle" />
@@ -70,7 +74,10 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/edittext"
-            android:text="@string/et_offPrice"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:inputType="numberDecimal"
+            android:hint="Enter offer price here"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
@@ -96,7 +103,12 @@
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:background="@drawable/edittext"
-            android:text="@string/et_offerDes"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:inputType="textImeMultiLine"
+            android:gravity="start"
+            android:paddingTop="15dp"
+            android:hint="Enter offer description here"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
