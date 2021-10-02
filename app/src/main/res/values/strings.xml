@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">FOSMAD</string>
+    <string name="tv_cafebean">CAFE BEAN COLOMBO IS ONE OF THE OLDEST COFFEE HOUSES IN SRI LANKA. CAFE BEAN IS WELL KNOWN FOR EMPHASIZING ON SERVING QUALITY COFFEE ALL THE TIME. WE CURRENTLY HAVE AROUND 5 BRANCHES AND IS GROWING RAPIDLY.</string>
+    <string name="tv_aboutus">About Us</string>
+    <string name="tv_about_cafe_bean">About Cafe Bean</string>
+    <string name="tv_our_coffee_story">OUR COFFEEE STORY</string>
+    <string name="tv_cafebean2">Cafe Bean Malabe is one of the Best coffee houses in Sri Lanka. Cafe Bean is well known for emphasizing on serving quality coffee all the time</string>
+    <string name="tv_contact_us">Contact Us</string>
+    <string name="et_name">Name</string>
+    <string name="et_message">Message</string>
+    <string name="tv_rateyourexpierience">Please Rate Your Expierience</string>
+    <string name="et_write_review">Write Review...</string>
+    <string name="et_contact_cafe_bean">contact@cafebean.com</string>
+<!--    <string name="et_name">Name</string>-->
+    <string name="tv_name1">arya:</string>
+    <string name="tv_fviewname1">Name :</string>
+    <string name="tv_fviewrating1">Rating :</string>
+    <string name="tv_tviewreview1">Review :</string>
+    <string name="tv_fviewname2">Name :</string>
+    <string name="tv_callusformore">Call Us For More...</string>
+
 </resources>
