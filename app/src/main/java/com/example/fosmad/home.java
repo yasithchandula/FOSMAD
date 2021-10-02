@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -30,23 +32,23 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        recyclerView=findViewById(R.id.itemlist);
-        database= FirebaseDatabase.getInstance().getReference("item");
+        recyclerView = findViewById(R.id.itemlist);
+        database = FirebaseDatabase.getInstance().getReference("item");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        list=new ArrayList<>();
-        itmadapter=new itmadapter(this,list);
+        list = new ArrayList<>();
+        itmadapter = new itmadapter(this, list);
         recyclerView.setAdapter(itmadapter);
 
-        bottomNavigationView=findViewById(R.id.bottomnavview);
+        bottomNavigationView = findViewById(R.id.bottomnavview);
         bottomNavigationView.setBackground(null);
 
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot:snapshot.getChildren()){
-                    item item=dataSnapshot.getValue(item.class);
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    item item = dataSnapshot.getValue(item.class);
                     list.add(item);
                 }
                 itmadapter.notifyDataSetChanged();
@@ -56,6 +58,11 @@ public class home extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
+
+
         });
+
+
     }
+
 }

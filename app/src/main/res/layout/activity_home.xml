@@ -7,16 +7,17 @@
     tools:context=".home"
     >
 <!--    android:background="#FFEDEDED"-->
+    <include layout="@layout/custom_toolbar" />
+
 
     <ImageView
         android:id="@+id/logohome"
-        android:layout_width="411dp"
-        android:layout_height="111dp"
+        android:layout_width="404dp"
+        android:layout_height="49dp"
         android:src="@drawable/cafebean"
-        app:layout_constraintBottom_toTopOf="@id/search_cardview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:visibility="invisible"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/search_cardview"
@@ -161,7 +162,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/itemlist"
         android:layout_width="413dp"
-        android:layout_height="342dp"
+        android:layout_height="414dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sv_category" />

@@ -47,7 +47,7 @@ public class itmadapter extends RecyclerView.Adapter<itmadapter.MyViewHolder> {
         Glide.with(context).load(list.get(position).getImageUrl()).into(holder.imageUrl1);
         holder.name.setText(item.getName());
         holder.price.setText(item.getPrice());
-        holder.description.setText(item.getDiscription());
+        holder.category.setText(item.getCategory());
 
         // Send data to the selected offer
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +57,7 @@ public class itmadapter extends RecyclerView.Adapter<itmadapter.MyViewHolder> {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("name", item.getName());
                 intent.putExtra("price", item.getPrice());
-                intent.putExtra("description", item.getDiscription());
+                intent.putExtra("description", item.getDescription());
                 intent.putExtra("imageUrl", item.getImageUrl());
                 view.getContext().startActivity(intent);
             }
@@ -74,12 +74,12 @@ public class itmadapter extends RecyclerView.Adapter<itmadapter.MyViewHolder> {
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         ImageView imageUrl1;
-        TextView name,price,description;
+        TextView name,price,category;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             name=itemView.findViewById(R.id.tv_itname);
-            description=itemView.findViewById(R.id.tv_description);
+            category=itemView.findViewById(R.id.tv_category);
             price=itemView.findViewById(R.id.tv_itprice);
             imageUrl1=itemView.findViewById(R.id.iv_itemimage);
 
