@@ -56,4 +56,12 @@
     <string name="tv_off_title">offer title</string>
     <string name="tv_uploadimg">Upload an image</string>
     <string name="btn_publish">PUBLISH</string>
+
+
+    <string-array name="category">
+        <item>Tea</item>
+        <item>Coffee</item>
+        <item>Juice</item>
+        <item>Smoothie</item>
+    </string-array>
 </resources>
