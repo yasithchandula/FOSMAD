@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,50 +14,41 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class CartActivity extends AppCompatActivity {
+public class AdminOfferActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    ArrayList<CartItems> CList;
-    CartAdapter adapter;
-    TextView total_tv, subtotal;
+    ArrayList<Offers> adList;
+    AdminOfferAdapter adapter;
 
-    DatabaseReference DbRef;
+    DatabaseReference dbRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
+        setContentView(R.layout.activity_admin_offer);
 
         recyclerView = findViewById(R.id.recyclerview_offers_admin);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        CList = new ArrayList<>();
-        adapter = new CartAdapter(this, CList);
+        adList = new ArrayList<>();
+        adapter = new AdminOfferAdapter(this, adList);
         recyclerView.setAdapter(adapter);
-        total_tv = findViewById(R.id.tv_tPrice);
-        subtotal = findViewById(R.id.tv_subPrice);
 
-        DbRef = FirebaseDatabase.getInstance().getReference("Cart/User/Items");
+        dbRef = FirebaseDatabase.getInstance().getReference("Offers");
 
-        DbRef.addValueEventListener(new ValueEventListener() {
-            @SuppressLint("SetTextI18n")
+        dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                CList.clear();
-                Double total = 0.0;
-
+                adList.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    CartItems cartList = dataSnapshot.getValue(CartItems.class);
-                    cartList.setItemKey(dataSnapshot.getKey());
-                    total = total + (cartList.getProductPrice() * cartList.getProductQty());
-                    CList.add(cartList);
+                    Offers adOffer = dataSnapshot.getValue(Offers.class);
+                    adOffer.setItemKey(dataSnapshot.getKey());
+                    adList.add(adOffer);
                 }
-
-                total_tv.setText("Rs."+total.toString());
-                subtotal.setText("Rs."+total.toString());
-
                 adapter.notifyDataSetChanged();
+
             }
 
             @Override

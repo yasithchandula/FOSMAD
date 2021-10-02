@@ -1,5 +1,7 @@
 package com.example.fosmad;
 
+import com.google.firebase.database.Exclude;
+
 public class Offers {
 
     String offerTitle;
@@ -7,6 +9,16 @@ public class Offers {
     String offerDescription;
     String offerImage;
 
+    @Exclude
+    String itemKey;
+
+    public String getItemKey() {
+        return itemKey;
+    }
+
+    public void setItemKey(String itemKey) {
+        this.itemKey = itemKey;
+    }
 
     public Offers() {
 

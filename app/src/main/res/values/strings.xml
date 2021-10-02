@@ -57,6 +57,23 @@
     <string name="tv_uploadimg">Upload an image</string>
     <string name="btn_publish">PUBLISH</string>
 
+    <string name="tv_offerTitle_clicked">offer title</string>
+    <string name="tv_off_clicked_price">Rs.</string>
+    <string name="tv_offerDes_clicked">Description</string>
+    <string name="tv_ViewOfferDescription">offer description</string>
+    <string name="btn_addtocart_clicked">Add to Cart</string>
+    <string name="tv_offerPrice_clicked">offer price</string>
+    <string name="btn_qty">1</string>
+    <string name="tv_Rs">Rs.</string>
+    <string name="tv_qtyPrice">price</string>
+    <string name="tv_item_name">item title</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_delete_offer">Delete Offer</string>
+    <string name="tv_toolbar_offer_title">OFFERS</string>
+    <string name="tv_toolbar_cart_title">My Cart</string>
+
+
 
     <string-array name="category">
         <item>Tea</item>
@@ -64,4 +81,5 @@
         <item>Juice</item>
         <item>Smoothie</item>
     </string-array>
+
 </resources>
