@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FOSMAD" >
         <activity
-            android:name=".Feedback_View"
-            android:exported="true" />
-        <activity
             android:name=".Contact_Us"
             android:exported="true" />
         <activity
