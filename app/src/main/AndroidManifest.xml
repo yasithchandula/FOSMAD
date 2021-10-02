@@ -11,18 +11,46 @@
         android:theme="@style/Theme.FOSMAD">
 
         <activity
-            android:name=".AddOfferActivity"
-            android:exported="true">
+            android:name=".AdminOfferActivity"
+            android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
-        <activity android:name=".CartActivity" />
+        <activity
+            android:name=".ViewOfferActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".AddOfferActivity"
+            android:exported="true" />
+
+        <activity android:name=".CartActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
 
         <activity android:name=".MainActivity" />
+
+        <activity android:name=".OffersActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
 
     </application>
 

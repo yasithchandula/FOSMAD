@@ -96,7 +96,6 @@ public class AddOfferActivity extends AppCompatActivity {
         Float offerPrice = Float.valueOf(txt_price.getText().toString().trim());
         String offerDescription = txt_description.getText().toString();
 
-
         offers = new Offers(offerTitle, offerPrice, offerDescription);
 
         uploadToFirebase(imageUri);
