@@ -1,5 +1,82 @@
 <resources>
     <string name="app_name">FOSMAD</string>
+    <string name="iv_mainlogo">logo</string>
+    <string name="pt_searchbar">Search</string>
+    <string name="btn_cat_tea">TEA</string>
+    <string name="btn_cat_coffee">COFFEE</string>
+    <string name="btn_cat_juice">JUICE</string>
+    <string name="btn_cat_smoothie">SMOOTHIES</string>
+    <string name="pt_pdname">Bubble Tea</string>
+    <string name="pt_cat_view_tea">TEA</string>
+    <string name="btn_addtocart">Add to Cart</string>
+    <string name="pt_reviews">"Reviews "</string>
+    <string name="tl_inputname"> Enter Name </string>
+    <string name="til_pnameinput">Enter Name</string>
+    <string name="pt_input_p_name">Enter Product Name</string>
+    <string name="til_category_select">Select Category</string>
+    <string name="actv_categoryselect">Select Category</string>
+    <string name="pt_input_price">Enter Price</string>
+    <string name="pt_input_description">Enter Description</string>
+    <string name="tvuploadimage">Upload Image</string>
+    <string name="btn_reset_additem">Reset</string>
+    <string name="btn_submit_additem">Add Item</string>
+    <string name="tv_allitem_list">All Item List</string>
+    <string name="tv_list_name">Milk Coffee</string>
+    <string name="tv_list_details">Description</string>
+    <string name="btn_list_edit_remove">Edit/Remove</string>
+    <string name="btn_pview_edit">edit</string>
+    <string name="btn_pview_delete">delete</string>
+    <string name="btn_submit_editform">edit</string>
+    <string name="btn_reset_editform">reset</string>
+    <string name="tv_cart_head">My Cart</string>
+    <string name="tv_sub">Sub total :</string>
+    <string name="tv_subPrice">Rs.</string>
+    <string name="tv_discount">Discounts :</string>
+    <string name="tv_disPrice">Rs.</string>
+    <string name="btn_checkout">CHECKOUT</string>
+    <string name="tv_total">Total :</string>
+    <string name="tv_tPrice">Rs.</string>
+    <string name="tv_rs1">Rs.</string>
+    <string name="tv_priceEach">0</string>
+    <string name="tv_priceTotal">0</string>
+    <string name="tv_rs2">Rs.</string>
+    <string name="tv_itemQty">1</string>
+    <string name="tv_itemTitle">Title</string>
+    <string name="img_cart1">added item cart image</string>
+    <string name="btn_minus">quantity decrement button</string>
+    <string name="btn_plus">quantity increment button</string>
+    <string name="tv_offerTitle">Offer Title</string>
+    <string name="et_offTitle" />
+    <string name="tv_offerPrice">Offer Price</string>
+    <string name="et_offPrice" />
+    <string name="tv_offerDescription">Offer Description</string>
+    <string name="et_offerDes" />
+    <string name="tv_offerHead">OFFERS</string>
+    <string name="img_off1">offer image 1</string>
+    <string name="tv_off_title">offer title</string>
+    <string name="tv_uploadimg">Upload an image</string>
+    <string name="btn_publish">PUBLISH</string>
+
+    <string name="tv_offerTitle_clicked">offer title</string>
+    <string name="tv_off_clicked_price">Rs.</string>
+    <string name="tv_offerDes_clicked">Description</string>
+    <string name="tv_ViewOfferDescription">offer description</string>
+    <string name="btn_addtocart_clicked">Add to Cart</string>
+    <string name="tv_offerPrice_clicked">offer price</string>
+    <string name="btn_qty">1</string>
+    <string name="tv_Rs">Rs.</string>
+    <string name="tv_qtyPrice">price</string>
+    <string name="tv_item_name">item title</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_delete_offer">Delete Offer</string>
+    <string name="tv_toolbar_offer_title">OFFERS</string>
+    <string name="tv_toolbar_cart_title">My Cart</string>
+
+
+
+
+
     <string name="tv_cafebean">CAFE BEAN COLOMBO IS ONE OF THE OLDEST COFFEE HOUSES IN SRI LANKA. CAFE BEAN IS WELL KNOWN FOR EMPHASIZING ON SERVING QUALITY COFFEE ALL THE TIME. WE CURRENTLY HAVE AROUND 5 BRANCHES AND IS GROWING RAPIDLY.</string>
     <string name="tv_aboutus">About Us</string>
     <string name="tv_about_cafe_bean">About Cafe Bean</string>
@@ -11,12 +88,27 @@
     <string name="tv_rateyourexpierience">Please Rate Your Expierience</string>
     <string name="et_write_review">Write Review...</string>
     <string name="et_contact_cafe_bean">contact@cafebean.com</string>
-<!--    <string name="et_name">Name</string>-->
+
+    <!--    <string name="et_name">Name</string>-->
+
     <string name="tv_name1">arya:</string>
     <string name="tv_fviewname1">Name :</string>
     <string name="tv_fviewrating1">Rating :</string>
     <string name="tv_tviewreview1">Review :</string>
     <string name="tv_fviewname2">Name :</string>
     <string name="tv_callusformore">Call Us For More...</string>
+
+
+    <string name="edit">EDIT</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="contact_number">Contact Number</string>
+
+    <string-array name="category">
+        <item>Tea</item>
+        <item>Coffee</item>
+        <item>Juice</item>
+        <item>Smoothie</item>
+    </string-array>
 
 </resources>

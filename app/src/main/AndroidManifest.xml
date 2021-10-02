@@ -28,18 +28,66 @@
             </intent-filter>
         </activity>
         <activity
+
             android:name=".MainActivity"
+            android:exported="true" />
+            
+        <activity
+            android:name=".admin_allitem_view"
             android:exported="true" >
-            <intent-filter>
+
+        </activity>
+        <activity
+            android:name=".AdminOfferActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".adminpannel"
+            android:exported="true" />
+      
+        <activity
+            android:name=".itemdetview"
+            android:exported="true" />
+      
+        <activity
+            android:name=".home"
+            android:exported="true">
+                      <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
+
         </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".ViewOfferActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".AddOfferActivity"
+            android:exported="true" />
+
+        <activity android:name=".CartActivity">
+
+        </activity>
+
+        <activity android:name=".MainActivity" />
+
+        <activity android:name=".OffersActivity">
+
+        </activity>
+
+        <activity
+            android:name=".additem"
+            android:exported="true" />
+
     </application>
 
 </manifest>
