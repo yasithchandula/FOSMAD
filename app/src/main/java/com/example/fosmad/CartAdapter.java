@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -83,6 +84,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 if (qty > 1){
                     addCart.setProductQty(--qty);
                     databaseRef.setValue(addCart);
+                }
+                else {
+                    Toast.makeText(context,"error",Toast.LENGTH_SHORT).show();
                 }
 
             }

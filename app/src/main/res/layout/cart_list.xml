@@ -128,7 +128,7 @@
                     android:layout_width="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="125dp"
+                    android:layout_marginStart="110dp"
                     android:background="@drawable/ic_action_cart_delete_1"
                     app:backgroundTint="@null"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
