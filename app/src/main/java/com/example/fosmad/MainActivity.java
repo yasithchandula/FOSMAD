@@ -11,6 +11,8 @@ import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnLogOut = findViewById(R.id.btnLogout);
+        //btnLogOut = findViewById(R.id.btnLogout);
         mAuth = FirebaseAuth.getInstance();
 
         btnLogOut.setOnClickListener(view ->{
