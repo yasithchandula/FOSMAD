@@ -2,6 +2,7 @@ package com.example.fosmad;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -20,7 +22,11 @@ public class ViewOfferActivity extends AppCompatActivity {
     ImageView offerImage;
     Button btn_addtoCart;
 
+    String userID;
+
     DatabaseReference Dbref;
+    FirebaseAuth firebaseAuth;
+
 
 
     @Override
@@ -45,13 +51,23 @@ public class ViewOfferActivity extends AppCompatActivity {
 
         Glide.with(ViewOfferActivity.this).load(offerImageURL).into(offerImage);
 
-        Dbref = FirebaseDatabase.getInstance().getReference().child("Cart").child("User").child("Items");
+
 
         btn_addtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InsertData();
-                Toast.makeText(ViewOfferActivity.this, "Offer Added", Toast.LENGTH_SHORT).show();
+
+                if (firebaseAuth.getCurrentUser() != null) {
+                    // Get the current user
+                    userID = firebaseAuth.getCurrentUser().getUid();
+                    Dbref = FirebaseDatabase.getInstance().getReference().child("Cart").child(userID).child("Items");
+                    InsertData();
+                    Toast.makeText(ViewOfferActivity.this, "Offer Added", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(ViewOfferActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                }
+
             }
 
 
