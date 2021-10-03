@@ -14,16 +14,28 @@ public class Contact_Us extends AppCompatActivity {
 
     EditText et_subject,et_message;
     Button btn;
+    Button btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
 
-//        et_subject = findViewById(R.id.et_name);
-//        et_message = findViewById(R.id.et_message);
-//
-//        btn = findViewById(R.id.email_send);
+
+        et_subject = findViewById(R.id.et_name);
+        et_message = findViewById(R.id.et_message);
+
+        btn = findViewById(R.id.email_send);
+        btn1 = findViewById(R.id.phone);
+        String phone = "0775575282";
+                btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phone));
+                startActivity(intent);
+            }
+        });
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +43,7 @@ public class Contact_Us extends AppCompatActivity {
                 String subject = et_subject.getText().toString().trim();
                 String message = et_message.getText().toString().trim();
                 String email = "contact@cafebean.com";
+
 
                 if(subject.isEmpty())
                 {
@@ -45,6 +58,7 @@ public class Contact_Us extends AppCompatActivity {
                     String mail = "mailto:" + email +
                             "?&subjects=" + Uri.encode(subject) +
                             "&body=" + Uri.encode(message);
+
 
                     Intent intent = new Intent(Intent.ACTION_SENDTO);
                     intent.setData(Uri.parse(mail));
