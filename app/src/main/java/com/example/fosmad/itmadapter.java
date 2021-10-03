@@ -5,6 +5,9 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,14 +21,18 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class itmadapter extends RecyclerView.Adapter<itmadapter.MyViewHolder> {
+public class itmadapter extends RecyclerView.Adapter<itmadapter.MyViewHolder> implements Filterable {
 
     Context context;
     ArrayList<item> list;
+    ArrayList<item> listFull;
+
+    Button cat_tea,cat_coffee,cat_juice,cat_smoothie;
 
     public itmadapter(Context context, ArrayList<item>list){
         this.context=context;
-        this.list=list;
+        this.listFull=list;
+        this.list = new ArrayList<>(listFull);
     }
 
 
@@ -64,6 +71,17 @@ public class itmadapter extends RecyclerView.Adapter<itmadapter.MyViewHolder> {
         });
 
 
+//        cat_tea.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//
+//            }
+//        });
+
+
+
 
     }
 
@@ -71,6 +89,42 @@ public class itmadapter extends RecyclerView.Adapter<itmadapter.MyViewHolder> {
     public int getItemCount() {
         return list.size();
     }
+
+    @Override
+    public Filter getFilter() {
+        return teaFilter;
+    }
+    private final Filter teaFilter = new Filter(){
+
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            ArrayList<item> filteredlist = new ArrayList<>();
+
+            if (charSequence == null || charSequence.length() == 0){
+                filteredlist.addAll(listFull);
+            }else{
+                String filterPattern = charSequence.toString().toLowerCase().trim();
+
+                for (item nitem : listFull){
+                    if (nitem.getName().toLowerCase().contains(filterPattern)){
+                        filteredlist.add(nitem);
+                    }
+                }
+            }
+            FilterResults filterResults = new FilterResults();
+            filterResults.values = filteredlist;
+            filterResults.count = filteredlist.size();
+            return filterResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+
+            list.clear();
+            list.addAll((ArrayList)filterResults.values);
+            notifyDataSetChanged();
+        }
+    };
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         ImageView imageUrl1;
@@ -83,6 +137,16 @@ public class itmadapter extends RecyclerView.Adapter<itmadapter.MyViewHolder> {
             price=itemView.findViewById(R.id.tv_itprice);
             imageUrl1=itemView.findViewById(R.id.iv_itemimage);
 
+
         }
     }
+
+
+
+
+
+
+
 }
+
+

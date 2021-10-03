@@ -104,7 +104,9 @@
                 android:hint="@string/btn_cat_tea"
                 android:shadowColor="@color/black"
                 android:text="TEA"
-                android:textColor="@color/white">
+                android:textColor="@color/white"
+                android:clickable="true"
+                android:onClick="teatapped">
 
             </Button>
 

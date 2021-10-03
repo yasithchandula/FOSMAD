@@ -33,8 +33,8 @@ public class Feedback_Rating extends AppCompatActivity {
 
         rateCount = findViewById(R.id.tv_ratecount);
         ratingBar = findViewById(R.id.ratingbar);
-        review = findViewById(R.id.et_write_review);
-        submit = findViewById(R.id.submitBtn);
+//        review = findViewById(R.id.et_write_review);
+//        submit = findViewById(R.id.submitBtn);
         showRating = findViewById(R.id.showRating);
         // Write a message to the database
 

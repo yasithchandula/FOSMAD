@@ -7,28 +7,28 @@
     >
 
 
-    <TextView
-        android:id="@+id/tname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name"
-        android:textSize="22sp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tname"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/name"-->
+<!--        android:textSize="22sp"/>-->
 
-    <TextView
-        android:id="@+id/taddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/address"
-        android:textSize="22sp"
-        android:layout_marginStart="25dp"
-        />
+<!--    <TextView-->
+<!--        android:id="@+id/taddress"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/address"-->
+<!--        android:textSize="22sp"-->
+<!--        android:layout_marginStart="25dp"-->
+<!--        />-->
 
-    <TextView
-        android:id="@+id/tConNo"
-        android:layout_width="193dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="25dp"
-        android:text="@string/contact_number"
-        android:textSize="22sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/tConNo"-->
+<!--        android:layout_width="193dp"-->
+<!--        android:layout_height="37dp"-->
+<!--        android:layout_marginStart="25dp"-->
+<!--        android:text="@string/contact_number"-->
+<!--        android:textSize="22sp" />-->
 
 </LinearLayout>
