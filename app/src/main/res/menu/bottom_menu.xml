@@ -15,6 +15,7 @@
         android:title="deals"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_baseline_local_fire_department_24"
+        android:enabled="true"
         />
 
     <item

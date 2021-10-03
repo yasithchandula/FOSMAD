@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -41,7 +42,12 @@ public class home extends AppCompatActivity {
 //    BottomNavigationView bmappbar;
 
 
-
+//    @Override
+////    protected void onResume() {
+////        super.onResume();
+////        BottomNavigationView bt=(BottomNavigationView) findViewById(R.id.bottomnavview);
+////        bt.setSelectedItemId(R.id.deals);
+////    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
