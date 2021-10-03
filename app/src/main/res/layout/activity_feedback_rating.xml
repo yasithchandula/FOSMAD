@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Feedback_Rating"
     android:orientation="vertical"
-    android:padding="16dp" >
+    android:padding="16dp"
+    tools:context=".Feedback_Rating">
 
+  <include
+      layout="@layout/custom_toolbar"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
   <TextView
       android:id="@+id/tv_rateyourexpierience"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_marginTop="84dp"
       android:text="@string/tv_rateyourexpierience"
       android:textAppearance="?android:textAppearanceLarge"
+      android:textColor="#E64A19"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintHorizontal_bias="0.496"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,9 +31,10 @@
       android:id="@+id/ratingbar"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="72dp"
+      android:layout_marginTop="12dp"
+      android:progressTint="#E64A19"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.456"
+      app:layout_constraintHorizontal_bias="0.461"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/imageView"
       tools:ignore="SpeakableTextPresentCheck" />
@@ -36,9 +43,10 @@
       android:id="@+id/tv_ratecount"
       android:layout_width="227dp"
       android:layout_height="0dp"
-      android:layout_marginTop="24dp"
+      android:layout_marginTop="16dp"
       android:textAppearance="?android:textAppearanceMedium"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.505"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/showRating" />
 
@@ -47,7 +55,7 @@
       android:layout_width="94dp"
       android:layout_height="55dp"
       android:layout_gravity="right"
-      android:layout_marginTop="76dp"
+      android:layout_marginTop="16dp"
       android:text="Submit"
       android:textAllCaps="false"
       app:backgroundTint="#E64A19"
@@ -58,15 +66,15 @@
 
   <EditText
       android:id="@+id/et_write_review"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="96dp"
-      android:layout_marginTop="24dp"
+      android:layout_width="268dp"
+      android:layout_height="81dp"
+      android:layout_marginTop="28dp"
+      android:background="@drawable/custom_btn"
       android:hint="@string/et_write_review"
       android:minHeight="48dp"
       android:textAppearance="?android:textAppearanceMedium"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.234"
+      app:layout_constraintHorizontal_bias="0.559"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/tv_ratecount" />
 
@@ -74,8 +82,10 @@
       android:id="@+id/showRating"
       android:layout_width="181dp"
       android:layout_height="0dp"
+      android:layout_marginTop="16dp"
       android:textAppearance="?android:textAppearanceMedium"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.452"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/ratingbar" />
 
@@ -83,12 +93,12 @@
       android:id="@+id/imageView"
       android:layout_width="365dp"
       android:layout_height="249dp"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="24dp"
+      android:background="#E64A19"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.347"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/tv_rateyourexpierience"
       app:srcCompat="@drawable/image0" />
 
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

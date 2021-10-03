@@ -7,86 +7,110 @@
     android:orientation="vertical"
     tools:context=".Contact_Us">
 
+  <include
+      android:id="@+id/include"
+      layout="@layout/custom_toolbar" />
+
+
   <EditText
       android:id="@+id/et_contact_cafe_bean"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="104dp"
-      android:layout_marginTop="112dp"
+      android:layout_width="188dp"
+      android:layout_height="43dp"
+      android:layout_marginStart="4dp"
       android:enabled="false"
       android:hint="@string/et_contact_cafe_bean"
       android:padding="10dp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.093"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+      app:layout_constraintBaseline_toBaselineOf="@+id/tv_callusformore"
+      app:layout_constraintStart_toStartOf="parent" />
 
   <EditText
       android:id="@+id/et_name"
-      android:layout_width="133dp"
-      android:layout_height="77dp"
-      android:layout_marginTop="64dp"
+      android:layout_width="250dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="28dp"
+      android:background="@drawable/custom_btn"
       android:hint="@string/et_name"
       android:minHeight="48dp"
       android:padding="10dp"
-
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
   <EditText
       android:id="@+id/et_message"
-      android:layout_width="133dp"
-      android:layout_height="77dp"
-      android:layout_marginTop="32dp"
+      android:layout_width="250dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="16dp"
+      android:background="@drawable/custom_btn"
       android:hint="@string/et_message"
       android:minHeight="48dp"
       android:padding="10dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
   <Button
       android:id="@+id/email_send"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
-      android:background="#E8400B"
+
+      android:layout_width="88dp"
+      android:layout_height="46dp"
+      android:layout_marginStart="16dp"
       android:text="Send"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.498"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/et_contact_cafe_bean" />
+      android:textAllCaps="false"
+      app:backgroundTint="#E64A19"
+      app:layout_constraintBaseline_toBaselineOf="@+id/phone"
+      app:layout_constraintStart_toStartOf="parent" />
 
   <TextView
       android:id="@+id/tv_contact_us"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/tv_contact_us"
+      android:textColor="#E64A19"
       android:textSize="48sp"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintHorizontal_bias="0.497"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toBottomOf="@+id/include" />
 
   <ImageView
       android:id="@+id/imageView2"
       android:layout_width="221dp"
       android:layout_height="236dp"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="36dp"
+      android:background="#E64A19"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/tv_contact_us"
       app:srcCompat="@drawable/image4" />
 
-  <ImageView
-      android:id="@+id/imageView3"
-      android:layout_width="190dp"
-      android:layout_height="112dp"
-      android:layout_marginTop="48dp"
+  <Button
+      android:id="@+id/phone"
+      android:layout_width="88dp"
+      android:layout_height="46dp"
+      android:layout_marginStart="192dp"
+
+      android:layout_marginTop="44dp"
+      android:text="Call"
+      android:textAllCaps="false"
+      app:backgroundTint="#E64A19"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.5"
-      app:layout_constraintStart_toEndOf="@+id/et_message"
-      app:layout_constraintTop_toBottomOf="@+id/imageView2"
-      app:srcCompat="@drawable/image3" />
+      app:layout_constraintHorizontal_bias="0.407"
+      app:layout_constraintStart_toEndOf="@+id/email_send"
+      app:layout_constraintTop_toBottomOf="@+id/tv_callusformore" />
+
+  <TextView
+      android:id="@+id/tv_callusformore"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="44dp"
+      android:text="@string/tv_callusformore"
+      android:textSize="20sp"
+      app:layout_constraintStart_toEndOf="@+id/et_contact_cafe_bean"
+      app:layout_constraintTop_toBottomOf="@+id/et_message" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
