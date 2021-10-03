@@ -2,17 +2,23 @@ package com.example.fosmad;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ActionMenuView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.SearchView;
 
+import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,6 +38,10 @@ public class home extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     SearchView searchView;
+//    BottomNavigationView bmappbar;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +63,37 @@ public class home extends AppCompatActivity {
         cat_coffee=findViewById(R.id.btn_cat_coffee);
         cat_juice=findViewById(R.id.btn_cat_juice);
         cat_smoothie=findViewById(R.id.btn_cat_smoothie);
+
+//        bmappbar=findViewById(R.id.bottomnav);
+
+
+//        bmappbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener()
+//        {
+//            @Override
+//            public boolean onMenuItemClick(MenuItem item) {
+//                System.out.println("Home Come");
+//                switch (item.getItemId()){
+//                    case R.id.home:
+//                        System.out.println("Home clicked");
+//                        break;
+//                }
+//                return true;
+//            }
+//        });
+//
+//        bmappbar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                System.out.println("Home Come");
+//                switch (item.getItemId()) {
+//                    case R.id.home:
+//                        System.out.println("Home clicked");
+//                        break;
+//                }
+//                return true;
+//            }
+//        });
+
 
 //        homenav=findViewById(R.id.home);
 
@@ -186,6 +227,11 @@ public class home extends AppCompatActivity {
     public void teatapped(View view){
         filterlist("tea");
 
+    }
+
+    public void homeui(View view) {
+        Intent intent = new Intent(this,home.class  );
+        startActivity(intent);
     }
 
 
