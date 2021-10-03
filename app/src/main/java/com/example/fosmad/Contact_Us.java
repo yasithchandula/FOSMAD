@@ -20,10 +20,10 @@ public class Contact_Us extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
 
-        et_subject = findViewById(R.id.et_name);
-        et_message = findViewById(R.id.et_message);
-
-        btn = findViewById(R.id.email_send);
+//        et_subject = findViewById(R.id.et_name);
+//        et_message = findViewById(R.id.et_message);
+//
+//        btn = findViewById(R.id.email_send);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

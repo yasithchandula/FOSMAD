@@ -7,65 +7,65 @@
     android:orientation="vertical"
     tools:context=".Contact_Us">
 
-  <EditText
-      android:id="@+id/et_contact_cafe_bean"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="104dp"
-      android:layout_marginTop="112dp"
-      android:enabled="false"
-      android:hint="@string/et_contact_cafe_bean"
-      android:padding="10dp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.093"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+<!--  <EditText-->
+<!--      android:id="@+id/et_contact_cafe_bean"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_marginStart="104dp"-->
+<!--      android:layout_marginTop="112dp"-->
+<!--      android:enabled="false"-->
+<!--      android:hint="@string/et_contact_cafe_bean"-->
+<!--      android:padding="10dp"-->
+<!--      app:layout_constraintEnd_toEndOf="parent"-->
+<!--      app:layout_constraintHorizontal_bias="0.093"-->
+<!--      app:layout_constraintStart_toStartOf="parent"-->
+<!--      app:layout_constraintTop_toBottomOf="@+id/imageView3" />-->
 
-  <EditText
-      android:id="@+id/et_name"
-      android:layout_width="133dp"
-      android:layout_height="77dp"
-      android:layout_marginTop="64dp"
-      android:hint="@string/et_name"
-      android:minHeight="48dp"
-      android:padding="10dp"
+<!--  <EditText-->
+<!--      android:id="@+id/et_name"-->
+<!--      android:layout_width="133dp"-->
+<!--      android:layout_height="77dp"-->
+<!--      android:layout_marginTop="64dp"-->
+<!--      android:hint="@string/et_name"-->
+<!--      android:minHeight="48dp"-->
+<!--      android:padding="10dp"-->
 
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+<!--      app:layout_constraintStart_toStartOf="parent"-->
+<!--      app:layout_constraintTop_toBottomOf="@+id/imageView2" />-->
 
-  <EditText
-      android:id="@+id/et_message"
-      android:layout_width="133dp"
-      android:layout_height="77dp"
-      android:layout_marginTop="32dp"
-      android:hint="@string/et_message"
-      android:minHeight="48dp"
-      android:padding="10dp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/et_name" />
+<!--  <EditText-->
+<!--      android:id="@+id/et_message"-->
+<!--      android:layout_width="133dp"-->
+<!--      android:layout_height="77dp"-->
+<!--      android:layout_marginTop="32dp"-->
+<!--      android:hint="@string/et_message"-->
+<!--      android:minHeight="48dp"-->
+<!--      android:padding="10dp"-->
+<!--      app:layout_constraintStart_toStartOf="parent"-->
+<!--      app:layout_constraintTop_toBottomOf="@+id/et_name" />-->
 
-  <Button
-      android:id="@+id/email_send"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
-      android:background="#E8400B"
-      android:text="Send"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.498"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/et_contact_cafe_bean" />
+<!--  <Button-->
+<!--      android:id="@+id/email_send"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_marginTop="28dp"-->
+<!--      android:background="#E8400B"-->
+<!--      android:text="Send"-->
+<!--      app:layout_constraintEnd_toEndOf="parent"-->
+<!--      app:layout_constraintHorizontal_bias="0.498"-->
+<!--      app:layout_constraintStart_toStartOf="parent"-->
+<!--      app:layout_constraintTop_toBottomOf="@+id/et_contact_cafe_bean" />-->
 
-  <TextView
-      android:id="@+id/tv_contact_us"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="@string/tv_contact_us"
-      android:textSize="48sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.5"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+<!--  <TextView-->
+<!--      android:id="@+id/tv_contact_us"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:text="@string/tv_contact_us"-->
+<!--      android:textSize="48sp"-->
+<!--      app:layout_constraintEnd_toEndOf="parent"-->
+<!--      app:layout_constraintHorizontal_bias="0.5"-->
+<!--      app:layout_constraintStart_toStartOf="parent"-->
+<!--      app:layout_constraintTop_toTopOf="parent" />-->
 
   <ImageView
       android:id="@+id/imageView2"

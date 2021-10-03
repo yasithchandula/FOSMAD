@@ -32,7 +32,7 @@ public class MainActivitych extends AppCompatActivity {
         inputEmail4 = findViewById(R.id.inputEmail4);
 //buttons
         SUBMIT = findViewById(R.id.SUBMIT);
-        edit = findViewById(R.id.edit);
+//        edit = findViewById(R.id.edit);
 
 
         reff = FirebaseDatabase.getInstance().getReference().child("Member");

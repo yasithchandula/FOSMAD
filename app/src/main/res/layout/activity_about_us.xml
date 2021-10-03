@@ -24,53 +24,53 @@
             android:layout_marginTop="15dp"
             app:cardCornerRadius="20dp">
 
-            <TextView
-                android:id="@+id/tv_aboutus"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="serif-monospace"
-                android:padding="10dp"
-                android:text="@string/tv_aboutus"
-                android:textColor="#F33E06"
-                android:textSize="25dp"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/tv_aboutus"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:fontFamily="serif-monospace"-->
+<!--                android:padding="10dp"-->
+<!--                android:text="@string/tv_aboutus"-->
+<!--                android:textColor="#F33E06"-->
+<!--                android:textSize="25dp"-->
+<!--                android:textStyle="bold" />-->
 
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/tv_about_cafe_bean"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/bowlby_one"
-            android:padding="5dp"
-            android:text="@string/tv_about_cafe_bean"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_about_cafe_bean"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/bowlby_one"-->
+<!--            android:padding="5dp"-->
+<!--            android:text="@string/tv_about_cafe_bean"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="14sp" />-->
 
-        <TextView
-            android:id="@+id/tv_cafebean"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif-monospace"
-            android:padding="5dp"
-            android:text="@string/tv_cafebean"
-            android:textColor="@color/black"
-            android:textSize="12dp" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_cafebean"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="serif-monospace"-->
+<!--            android:padding="5dp"-->
+<!--            android:text="@string/tv_cafebean"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="12dp" />-->
 
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:srcCompat="@drawable/image0" />
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="200dp"-->
+<!--            app:srcCompat="@drawable/image0" />-->
 
-        <TextView
-            android:id="@+id/tv_our_coffee_story"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/bowlby_one"
-            android:text="@string/tv_our_coffee_story"
-            android:textColor="@color/black"
-            android:textSize="12dp" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_our_coffee_story"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/bowlby_one"-->
+<!--            android:text="@string/tv_our_coffee_story"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="12dp" />-->
 
         <TextView
             android:layout_width="wrap_content"
@@ -91,15 +91,15 @@ With our humble beginnings at Cafe Bean Malabe, throughout these two years Cafe 
             android:layout_height="200dp"
             app:srcCompat="@drawable/image1" />
 
-        <TextView
-            android:id="@+id/tv_cafebean2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif-monospace"
-            android:padding="5dp"
-            android:text="@string/tv_cafebean2"
-            android:textColor="@color/black"
-            android:textSize="12dp" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_cafebean2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="serif-monospace"-->
+<!--            android:padding="5dp"-->
+<!--            android:text="@string/tv_cafebean2"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="12dp" />-->
 
 
     </LinearLayout>
