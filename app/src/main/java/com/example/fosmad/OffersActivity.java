@@ -11,8 +11,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,6 +32,7 @@ public class OffersActivity extends AppCompatActivity {
     OfferAdapter adapter;
 
     DatabaseReference DBref;
+    BottomNavigationView bnv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +73,18 @@ public class OffersActivity extends AppCompatActivity {
                     .setPositiveButton("Close", null).show();
         }
 
+
+        bnv=(BottomNavigationView) findViewById(R.id.bottomnavview);
+        bnv.setBackground(null);
+//        bnv.getMenu().getItem(R.id.deals).setChecked(true);
+//        bnv.setSelectedItemId(R.id.deals);
+
+
+
+
+
     }
+
 
     public boolean isNetworkAvailable() {
 
@@ -97,4 +113,13 @@ public class OffersActivity extends AppCompatActivity {
         return false;
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        bnv=(BottomNavigationView) findViewById(R.id.bottomnavview);
+        bnv.setBackground(null);
+//        bnv.getMenu().getItem(R.id.deals).setChecked(true);
+//        bnv.setSelectedItemId(R.id.deals);
+    }
 }
