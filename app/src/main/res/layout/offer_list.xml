@@ -8,7 +8,7 @@
 
     <androidx.cardview.widget.CardView
         app:cardElevation="20dp"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="15dp"
         android:layout_margin="10dp"
         app:cardBackgroundColor="#FFFFFF"
         android:layout_width="match_parent"
@@ -21,19 +21,21 @@
 
             <ImageView
 
-                android:id="@+id/img_off1"
+                android:id="@+id/img_admin_off1"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
+                android:layout_margin="5dp"
                 android:contentDescription="@string/img_off1"
                 android:src="@drawable/off1">
 
             </ImageView>
 
             <TextView
-                android:id="@+id/tv_off_title"
+                android:id="@+id/tv_admin_off_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
                 android:text="@string/tv_off_title"
                 android:textColor="@color/black"

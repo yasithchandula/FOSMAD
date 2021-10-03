@@ -24,14 +24,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//
-//        btnLogOut = findViewById(R.id.btnLogout);
+
+
+
+        //btnLogOut = findViewById(R.id.btnLogout);
+
         mAuth = FirebaseAuth.getInstance();
 
         btnLogOut.setOnClickListener(view ->{
             mAuth.signOut();
             startActivity(new Intent(MainActivity.this, activity_login.class));
         });
+
 
 
         // Write a message to the database
@@ -41,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+//        myRef.setValue("Hello, World!");
+
+
+
+
+//        DatabaseReference myRef = database.getReference("hello");
+//
 //        myRef.setValue("Hello, World!");
 
     }
