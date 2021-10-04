@@ -6,13 +6,12 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
-    app:cardCornerRadius="8dp"
+    app:cardCornerRadius="15dp"
     android:layout_margin="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -22,15 +21,19 @@
             >
             <ImageView
                 android:id="@+id/iv_itemimage"
-                android:layout_width="200dp"
-                android:layout_height="150dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:orientation="vertical"
-                android:layout_marginTop="15dp">
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:id="@+id/tv_itname"
@@ -38,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:text="ABC"
                     android:textColor="@color/black"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -47,14 +50,28 @@
                     android:orientation="vertical"
                     android:layout_marginTop="10dp">
 
-                    <TextView
-                        android:id="@+id/tv_itprice"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ABC"
-                        android:textColor="#9C0101"
-                        android:textSize="20sp"
-                        />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs."
+                            android:textSize="18sp"
+                            android:textColor="#9C0101"/>
+
+                        <TextView
+                            android:id="@+id/tv_itprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ABC"
+                            android:textColor="#9C0101"
+                            android:textSize="18sp"
+                            />
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -67,11 +84,9 @@
                             android:layout_height="wrap_content"
                             android:text="ABC"
                             android:textColor="@color/black"
-                            android:textSize="20sp"
+                            android:textSize="18sp"
                             />
                     </LinearLayout>
-
-
 
                 </LinearLayout>
 
@@ -84,57 +99,12 @@
                         android:id="@+id/admin_del_btn"
                         android:layout_width="49dp"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="100dp"
+                        android:layout_marginLeft="155dp"
                         android:background="@drawable/ic_baseline_delete_24" />
                 </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>
-
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_gravity="center_vertical"-->
-        <!--            android:orientation="horizontal">-->
-
-
-        <!--        </LinearLayout>-->
-
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_gravity="center_vertical"-->
-        <!--            android:orientation="horizontal">-->
-
-        <!--            <TextView-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:text="Price : "-->
-        <!--                android:textColor="@color/black"-->
-        <!--                android:textSize="25sp"-->
-        <!--                android:textStyle="bold"/>-->
-
-
-        <!--        </LinearLayout>-->
-
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_gravity="center_vertical"-->
-        <!--            android:orientation="horizontal">-->
-
-        <!--            <TextView-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:text="Name : "-->
-        <!--                android:textColor="@color/black"-->
-        <!--                android:textSize="25sp"-->
-        <!--                android:textStyle="bold"/>-->
-
-
-        <!--        </LinearLayout>-->
-
-
 
     </LinearLayout>
 

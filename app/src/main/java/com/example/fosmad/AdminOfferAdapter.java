@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -47,12 +48,14 @@ public class AdminOfferAdapter extends RecyclerView.Adapter<AdminOfferAdapter.Ad
         String Key = offset.getItemKey();
         DatabaseReference DbReferance = FirebaseDatabase.getInstance().getReference().child("Offers").child(Key);
 
+        //delete offer
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DbReferance.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(context, "Offer deleted", Toast.LENGTH_SHORT).show();
 
                     }
                 });
