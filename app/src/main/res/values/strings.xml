@@ -100,6 +100,8 @@
     <string name="address">Address</string>
     <string name="contact_number">Contact Number</string>
     <string name="tv_toolbar_review_title">REVIEWS</string>
+    <string name="tv_item_price_main">Rs.</string>
+    <string name="tv_item_category">Category :</string>
 
     <string-array name="category">
         <item>Tea</item>
