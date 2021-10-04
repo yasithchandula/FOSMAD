@@ -41,7 +41,7 @@
             android:layout_marginTop="4dp"
             android:text="@string/tv_offerTitle_clicked"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="19sp"
             android:textStyle="bold">
 
         </TextView>
@@ -61,7 +61,7 @@
             android:layout_marginTop="2dp"
             android:text="@string/tv_off_clicked_price"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:textStyle="bold">
 
         </TextView>
@@ -74,7 +74,7 @@
             android:layout_marginTop="2dp"
             android:text="@string/tv_offerPrice_clicked"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:textStyle="bold">
 
         </TextView>
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:text="@string/tv_offerDes_clicked"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="17sp"
             android:textStyle="bold">
 
         </TextView>
@@ -112,6 +112,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="10dp"
             android:text="@string/tv_ViewOfferDescription">
 
         </TextView>
@@ -136,6 +138,8 @@
         </Button>
 
     </LinearLayout>
+
+
 
 
 
