@@ -27,7 +27,7 @@ public class Feedback_View extends Activity {
     Feedback_View_Adapter feedback_view_adapter;
 
     String itemKey;
-    Button addReview;
+    Button addReview, myReviews;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class Feedback_View extends Activity {
         itemKey = getIntent().getExtras().getString("itemKey");
 
         addReview = findViewById(R.id.btn_add_review);
+        myReviews = findViewById(R.id.btn_my_review);
 
         recyclerView = findViewById(R.id.recyclerview_reviews);
         recyclerView.setHasFixedSize(true);
@@ -51,11 +52,13 @@ public class Feedback_View extends Activity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 list.clear();
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    RatingObj ratingObj = dataSnapshot.getValue(RatingObj.class);
-                    list.add(ratingObj);
-                    assert ratingObj != null;
-                    System.out.println(ratingObj.getRating());
+                for(DataSnapshot ds: snapshot.getChildren()) {
+                    for (DataSnapshot dataSnapshot : ds.getChildren()) {
+                        RatingObj ratingObj = dataSnapshot.getValue(RatingObj.class);
+                        list.add(ratingObj);
+                        assert ratingObj != null;
+                        System.out.println(ratingObj.getRating());
+                    }
                 }
                 feedback_view_adapter = new Feedback_View_Adapter(Feedback_View.this, list);
                 recyclerView.setAdapter(feedback_view_adapter);
@@ -73,6 +76,16 @@ public class Feedback_View extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), Feedback_Rating.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("itemKey", itemKey);
+                v.getContext().startActivity(intent);
+            }
+        });
+
+        myReviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Feedback_My.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("itemKey", itemKey);
                 v.getContext().startActivity(intent);

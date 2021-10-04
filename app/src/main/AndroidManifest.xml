@@ -13,6 +13,10 @@
         android:theme="@style/Theme.FOSMAD" >
 
         <activity
+            android:name=".Feedback_My"
+            android:exported="true" />
+
+        <activity
             android:name=".home"
             android:exported="true" >
 
@@ -94,6 +98,10 @@
 
         <activity
             android:name=".additem"
+            android:exported="true" />
+
+        <activity
+            android:name=".Feedback_Edit_My"
             android:exported="true" />
 
 
