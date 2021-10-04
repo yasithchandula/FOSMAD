@@ -17,7 +17,7 @@
       android:id="@+id/et_contact_cafe_bean"
       android:layout_width="188dp"
       android:layout_height="43dp"
-      android:layout_marginStart="4dp"
+      android:layout_marginStart="16dp"
       android:enabled="false"
       android:hint="@string/et_contact_cafe_bean"
       android:padding="10dp"
@@ -81,7 +81,7 @@
       android:id="@+id/imageView2"
       android:layout_width="221dp"
       android:layout_height="236dp"
-      android:layout_marginTop="36dp"
+      android:layout_marginTop="16dp"
       android:background="#E64A19"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +94,7 @@
       android:layout_height="46dp"
       android:layout_marginStart="192dp"
 
-      android:layout_marginTop="44dp"
+      android:layout_marginTop="28dp"
       android:text="Call"
       android:textAllCaps="false"
       app:backgroundTint="#E64A19"
@@ -107,12 +107,27 @@
       android:id="@+id/tv_callusformore"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="16dp"
-      android:layout_marginTop="44dp"
+      android:layout_marginStart="12dp"
+      android:layout_marginTop="24dp"
       android:text="@string/tv_callusformore"
       android:textSize="20sp"
       app:layout_constraintStart_toEndOf="@+id/et_contact_cafe_bean"
       app:layout_constraintTop_toBottomOf="@+id/et_message" />
+
+
+  <fragment
+      android:id="@+id/fragment_bottom"
+      android:name="com.example.fosmad.BottomNavFragment"
+      android:layout_width="411dp"
+      android:layout_height="80dp"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_gravity="bottom"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintVertical_bias="1.0"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

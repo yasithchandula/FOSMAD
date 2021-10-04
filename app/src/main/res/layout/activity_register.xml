@@ -127,7 +127,8 @@
                 android:text="Login here"
                 android:textColor="@color/teal_700"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:clickable="true"/>
 
         </LinearLayout>
 <!--        </ScrollView>-->
