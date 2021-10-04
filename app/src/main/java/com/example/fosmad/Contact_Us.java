@@ -52,7 +52,7 @@ public class Contact_Us extends AppCompatActivity {
 
                 if(subject.isEmpty())
                 {
-                    Toast.makeText(Contact_Us.this, "Please add Subject", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Contact_Us.this, "Please add Name", Toast.LENGTH_SHORT).show();
                 }
                 else if (message.isEmpty())
                 {
