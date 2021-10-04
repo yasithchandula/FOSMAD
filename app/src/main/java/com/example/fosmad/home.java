@@ -108,6 +108,7 @@ public class home extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     item item = dataSnapshot.getValue(item.class);
+                    item.setItemKey(dataSnapshot.getKey());
                     list.add(item);
                 }
                 itmadapter = new itmadapter(home.this, list);

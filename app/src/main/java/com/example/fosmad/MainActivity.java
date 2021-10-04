@@ -19,11 +19,12 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnLogOut;
     FirebaseAuth mAuth;
-//create
+    //create
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
 
 
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef ;
@@ -45,13 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        myRef.setValue("Hello, World!");
-
-
-
-
-//        DatabaseReference myRef = database.getReference("hello");
-//
 //        myRef.setValue("Hello, World!");
 
     }

@@ -1,13 +1,19 @@
 package com.example.fosmad;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -23,7 +29,7 @@ public class Feedback_Rating extends AppCompatActivity {
     Button submit;
     RatingBar ratingBar;
     float rateValue;
-    String temp;
+    String temp, itemKey;
 
 
     @Override
@@ -36,6 +42,7 @@ public class Feedback_Rating extends AppCompatActivity {
 //        review = findViewById(R.id.et_write_review);
 //        submit = findViewById(R.id.submitBtn);
         showRating = findViewById(R.id.showRating);
+        itemKey = getIntent().getExtras().getString("itemKey");
         // Write a message to the database
 
 
@@ -76,12 +83,28 @@ public class Feedback_Rating extends AppCompatActivity {
                 user.put("Review", rvw);
 
 
-                myRef.setValue(user);
+                myRef.child(itemKey).push().setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(Feedback_Rating.this, "Review added successfully!",
+                                Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), Feedback_View.class));
+                        finish();
+
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Feedback_Rating.this, "ERROR!",
+                                Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), Feedback_View.class));
+                        finish();
+                    }
+                });
 
 
-                review.setText("");
-                ratingBar.setRating(0);
-                rateCount.setText("");
+
+
             }
         });
     }

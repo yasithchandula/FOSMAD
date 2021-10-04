@@ -66,6 +66,7 @@ public class itmadapter extends RecyclerView.Adapter<itmadapter.MyViewHolder> im
                 intent.putExtra("price", item.getPrice());
                 intent.putExtra("description", item.getDescription());
                 intent.putExtra("imageUrl", item.getImageUrl());
+                intent.putExtra("itemKey", item.getItemKey());
                 view.getContext().startActivity(intent);
             }
         });

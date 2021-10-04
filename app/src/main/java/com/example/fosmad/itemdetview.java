@@ -20,7 +20,7 @@ public class itemdetview extends AppCompatActivity {
     ImageView itemimage;
     TextView tv_name,tv_price,tv_description;
     Button addtocart, reviews;
-    String name,price,description,imageUrl;
+    String name,price,description,imageUrl, itemKey;
 
     DatabaseReference Dbref;
 
@@ -33,12 +33,18 @@ public class itemdetview extends AppCompatActivity {
         price=getIntent().getExtras().getString("price");
         description=getIntent().getExtras().getString("description");
         imageUrl=getIntent().getExtras().getString("imageUrl");
+        itemKey = getIntent().getExtras().getString("itemKey");
+
 
         tv_name=findViewById(R.id.tv_itdet_name);
         tv_price=findViewById(R.id.tv_itdet_price);
         tv_description=findViewById(R.id.tv_itdet_description);
         itemimage=findViewById(R.id.iv_itemdetimage);
+
+        reviews = findViewById(R.id.btn_view_reviews);
+
         addtocart = findViewById(R.id.btn_add_to_cart_item);
+
 
 
         tv_name.setText(name);
@@ -47,6 +53,18 @@ public class itemdetview extends AppCompatActivity {
 
         Glide.with(itemdetview.this).load(imageUrl).into(itemimage);
         itemimage=findViewById(R.id.iv_itemimage);
+
+   itemimage=findViewById(R.id.iv_itemimage);
+
+        reviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Feedback_View.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("itemKey", itemKey);
+                v.getContext().startActivity(intent);
+            }
+        });
 
         Dbref = FirebaseDatabase.getInstance().getReference().child("Cart").child("User").child("Items");
 
@@ -69,5 +87,7 @@ public class itemdetview extends AppCompatActivity {
 
         CartItems cartlist = new CartItems(productName, productPrice, quantity, productImage);
         Dbref.push().setValue(cartlist);
+
     }
+
 }
