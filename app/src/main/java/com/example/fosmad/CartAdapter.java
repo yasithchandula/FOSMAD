@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -26,6 +27,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
     Context context;
     ArrayList<CartItems> CList;
+    String userID;
+    FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
     public CartAdapter(Context context, ArrayList<CartItems> CList){
         this.context = context;
@@ -47,8 +50,12 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         holder.productQty.setText(addCart.getProductQty().toString());
         Glide.with(context).load(CList.get(position).getItemImage()).into(holder.productImage);
 
+
+
         String key = addCart.getItemKey();
-        DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference().child("Cart").child("User").child("Items").child(key);
+
+        userID = firebaseAuth.getCurrentUser().getUid();
+        DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference().child("Cart").child(userID).child("Items").child(key);
 
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override

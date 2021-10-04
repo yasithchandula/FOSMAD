@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class Contact_Us extends AppCompatActivity {
 
     EditText et_subject,et_message;
@@ -20,6 +22,9 @@ public class Contact_Us extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
+
+        BottomNavigationView btv=findViewById(R.id.bottomnavview);
+        btv.setBackground(null);
 
 
         et_subject = findViewById(R.id.et_name);

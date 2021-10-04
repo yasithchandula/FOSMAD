@@ -51,7 +51,7 @@ public class ViewOfferActivity extends AppCompatActivity {
 
         Glide.with(ViewOfferActivity.this).load(offerImageURL).into(offerImage);
 
-
+        firebaseAuth=FirebaseAuth.getInstance();
 
         btn_addtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
