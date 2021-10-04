@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -34,23 +34,20 @@
         </LinearLayout>
     </ScrollView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <fragment
         android:id="@+id/fragment_bottom"
         android:name="com.example.fosmad.BottomNavFragment"
-        android:layout_width="411dp"
-        android:layout_height="110dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sv_category"
+        app:layout_constraintVertical_bias="1.0" />
 
-        />
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
