@@ -6,6 +6,11 @@
     android:padding="28dp"
     >
 
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/mrview">-->
+
 
     <TextView
         android:id="@+id/tname"
@@ -30,5 +35,7 @@
         android:layout_marginStart="25dp"
         android:text="@string/contact_number"
         android:textSize="22sp" />
+
+<!--    </androidx.recyclerview.widget.RecyclerView>-->
 
 </LinearLayout>
