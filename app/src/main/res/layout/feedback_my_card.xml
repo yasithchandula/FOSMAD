@@ -77,7 +77,7 @@
                 android:layout_marginTop="2dp"
                 android:textSize="15sp"
                 android:layout_marginStart="235dp"
-                android:text="@string/tv_delete_offer"
+                android:text="Delete Review"
                 android:textStyle="bold" />
 
             <ImageButton
