@@ -19,18 +19,18 @@
         />
 
     <item
-        android:id="@+id/account"
-        android:title="account"
+        android:id="@+id/contactus"
+        android:title="Contact Us"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:icon="@drawable/ic_baseline_mail_outline_24"
 
         />
 
     <item
-        android:id="@+id/contact"
-        android:title="contact"
+        android:id="@+id/aboutus"
+        android:title="About Us"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:icon="@drawable/ic_baseline_info_24"
         />
 
 </menu>

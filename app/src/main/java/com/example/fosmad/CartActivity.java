@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -25,6 +28,7 @@ public class CartActivity extends AppCompatActivity {
     TextView total_tv, subtotal;
 
     DatabaseReference DbRef;
+    Button chekout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,8 @@ public class CartActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         total_tv = findViewById(R.id.tv_tPrice);
         subtotal = findViewById(R.id.tv_subPrice);
+        chekout=findViewById(R.id.btn_checkout);
+
 
         DbRef = FirebaseDatabase.getInstance().getReference("Cart/User/Items");
 
@@ -62,10 +68,21 @@ public class CartActivity extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
             }
 
+
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
+
+        chekout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(view.getContext(),MainActivitych.class);
+                startActivity(i);
+            }
+        });
     }
+
 }

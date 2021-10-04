@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 
 /**
@@ -100,7 +101,17 @@ public class BottomNavFragment extends Fragment {
                         Intent i1 = new Intent(getContext(),OffersActivity.class);
                         startActivity(i1);
                         break;
+                    case R.id.contactus:
+                        Intent i2=new Intent(getContext(),Contact_Us.class);
+                        startActivity(i2);
+                        break;
+                    case R.id.aboutus:
+                        Intent i3=new Intent(getContext(),About_Us.class);
+                        startActivity(i3);
+                        break;
                 }
+
+
                 return true;
 
             }
@@ -137,8 +148,20 @@ public class BottomNavFragment extends Fragment {
 //            }
 //        });
 
+        FloatingActionButton fbtn=(FloatingActionButton) view.findViewById(R.id.fa_cart);
+        fbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getContext(),CartActivity.class);
+                startActivity(i);
+            }
+        });
+
         return view;
+
     }
+
+
 
 
 

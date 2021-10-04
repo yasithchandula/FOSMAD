@@ -40,7 +40,7 @@
         android:backgroundTint="@color/white"
         app:layout_anchor="@id/bottomnav"
         android:id="@+id/fa_cart"
-        android:onClick="homeui"
+        android:clickable="true"
         />
 
 

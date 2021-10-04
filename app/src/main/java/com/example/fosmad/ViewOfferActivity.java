@@ -39,11 +39,11 @@ public class ViewOfferActivity extends AppCompatActivity {
         description = getIntent().getExtras().getString("Description");
         offerImageURL = getIntent().getExtras().getString("OfferImage");
 
-//        tv_offerTitle = findViewById(R.id.tv_offerTitle_clicked);
-//        tv_offerPrice = findViewById(R.id.tv_offerPrice_clicked);
-//        tv_description = findViewById(R.id.tv_offerDescription);
-//        offerImage = findViewById(R.id.img_clicked_offer);
-//        btn_addtoCart = findViewById(R.id.btn_addtocart_clicked);
+        tv_offerTitle = findViewById(R.id.tv_offerTitle_clicked);
+        tv_offerPrice = findViewById(R.id.tv_offerPrice_clicked);
+        tv_description = findViewById(R.id.tv_offerDescription);
+        offerImage = findViewById(R.id.img_clicked_offer);
+        btn_addtoCart = findViewById(R.id.btn_addtocart_clicked);
 
         tv_offerTitle.setText(title);
         tv_offerPrice.setText(price);

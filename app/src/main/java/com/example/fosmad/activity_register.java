@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -37,6 +38,7 @@ public class activity_register extends AppCompatActivity {
     String userID;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z0-9]+\\.+[a-z]+";
     String phonePattern = "[0-9]{10}";
+    TextView tologin;
 
 
     @Override
@@ -49,6 +51,7 @@ public class activity_register extends AppCompatActivity {
         regPhone = findViewById(R.id.etRegPhone);
         regPassword = findViewById(R.id.etRegPass);
         accountCreate=findViewById(R.id.btnRegister);
+        tologin=findViewById(R.id.tvLoginHere);
 
         //get current instance of firebase authentication
         fAuth = FirebaseAuth.getInstance();
@@ -149,6 +152,15 @@ public class activity_register extends AppCompatActivity {
                     }
                 });
 
+            }
+        });
+
+
+        tologin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(),activity_login.class);
+                startActivity(i);
             }
         });
     }

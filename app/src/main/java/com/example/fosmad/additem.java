@@ -8,6 +8,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
@@ -96,16 +97,32 @@ public class additem extends AppCompatActivity implements AdapterView.OnItemSele
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(TextUtils.isEmpty(name.getText().toString())){
+                    name.setError("Name is Required");
+                }
+                else if (TextUtils.isEmpty((price.getText().toString()))){
+                    price.setError("Price is Required");
+                }
+                else if(TextUtils.isEmpty((description.getText().toString()))){
+                    description.setError("Description is Required");
+                }
+                else if(imageUri==null){
+                    Toast.makeText(additem.this,"Image is required",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    uploadToFirebase(imageUri);
+                }
+
 //                item.setName(name.getText().toString());
 //                item.setPrice(price.getText().toString());
 //                item.setDescription(description.getText().toString());
 //
 //                myRef.child(String.valueOf(maxid+1)).setValue(item);
-                uploadToFirebase(imageUri);
-                if(imageUri!=null){
-                }else{
-                    Toast.makeText(additem.this,"",Toast.LENGTH_SHORT).show();
-                }
+
+//                if(imageUri!=null){
+//                }else{
+//
+//                }
             }
         });
 
@@ -152,7 +169,7 @@ public class additem extends AppCompatActivity implements AdapterView.OnItemSele
 //                        myRef.push().setValue(item);
                         myRef.child(String.valueOf(maxid+1)).setValue(item);
 
-                        Toast.makeText(additem.this,"Uploaded Successfully",Toast.LENGTH_SHORT);
+                        Toast.makeText(additem.this,"Item Added Successfully",Toast.LENGTH_SHORT);
                     }
                 });
 
