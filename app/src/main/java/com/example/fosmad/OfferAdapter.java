@@ -46,11 +46,10 @@ public class OfferAdapter extends RecyclerView.Adapter<OfferAdapter.OfferViewHol
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("mytest", "ONclick");
+
                 Intent intent = new Intent(view.getContext(), ViewOfferActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("Title", offset.getOfferTitle());
-                Log.d("mytest", offset.getOfferTitle());
                 intent.putExtra("Price", offset.getOfferPrice().toString());
                 intent.putExtra("Description", offset.getOfferDescription());
                 intent.putExtra("OfferImage", offset.getOfferImage());

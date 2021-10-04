@@ -54,15 +54,27 @@
                         android:text="Item Name"
                         android:textSize="25dp"
                         android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/tv_itdet_price"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="35dp"
                         android:text="Price : "
                         android:textSize="25dp"
                         android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Rs."/>
+
+                </LinearLayout>
+
 
                     <TextView
                         android:id="@+id/tv_itdet_description"

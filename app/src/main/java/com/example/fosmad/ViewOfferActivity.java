@@ -71,7 +71,7 @@ public class ViewOfferActivity extends AppCompatActivity {
 
         });
     }
-    //insert data to cart table
+    //insert data to cart child
     public  void InsertData(){
         String productName = title;
         Float productPrice = Float.valueOf(price);

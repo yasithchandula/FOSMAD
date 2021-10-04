@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -22,7 +23,10 @@ public class itemdetview extends AppCompatActivity {
     Button addtocart, reviews;
     String name,price,description,imageUrl, itemKey;
 
+    String userID;
+
     DatabaseReference Dbref;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,8 @@ public class itemdetview extends AppCompatActivity {
         Glide.with(itemdetview.this).load(imageUrl).into(itemimage);
         itemimage=findViewById(R.id.iv_itemimage);
 
+        firebaseAuth= FirebaseAuth.getInstance();
+
    itemimage=findViewById(R.id.iv_itemimage);
 
         reviews.setOnClickListener(new View.OnClickListener() {
@@ -65,8 +71,8 @@ public class itemdetview extends AppCompatActivity {
                 v.getContext().startActivity(intent);
             }
         });
-
-        Dbref = FirebaseDatabase.getInstance().getReference().child("Cart").child("User").child("Items");
+        userID = firebaseAuth.getCurrentUser().getUid();
+        Dbref = FirebaseDatabase.getInstance().getReference().child("Cart").child(userID);
 
         addtocart.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -41,6 +41,7 @@ public class admin_allitem_view extends AppCompatActivity {
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                list.clear();
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                     item item=dataSnapshot.getValue(item.class);
                     item.setItemKey(dataSnapshot.getKey());
