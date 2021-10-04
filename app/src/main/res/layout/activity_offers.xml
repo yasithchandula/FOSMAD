@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".OffersActivity">
+    tools:context=".OffersActivity"
+    >
     <include layout="@layout/custom_toolbar_offers"/>
 
     <ScrollView
         android:id="@+id/scrollView4"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="577dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,37 +27,30 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_offers_admin"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="563dp"
+                android:layout_marginTop="5dp" />
 
         </LinearLayout>
     </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-        <fragment
-            android:id="@+id/fragment_bottom"
-            android:name="com.example.fosmad.BottomNavFragment"
-            android:layout_width="411dp"
-            android:layout_height="110dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <fragment
+        android:id="@+id/fragment_bottom"
+        android:name="com.example.fosmad.BottomNavFragment"
+        android:layout_width="411dp"
+        android:layout_height="110dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
 
-
+        />
 
 
 </LinearLayout>
