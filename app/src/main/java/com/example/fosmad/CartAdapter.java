@@ -63,7 +63,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 databaseRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-//toast
+                        Toast.makeText(context, "Item removed", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -92,8 +92,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                     databaseRef.setValue(addCart);
                 }
                 else {
-                    Toast.makeText(context,"error",Toast.LENGTH_SHORT).show();
-                    //toast
+                    Toast.makeText(context,"Minimum quantity is one",Toast.LENGTH_SHORT).show();
+
                 }
 
             }

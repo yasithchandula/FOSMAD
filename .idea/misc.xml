@@ -3,13 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_add_offer.xml" value="0.2833333333333333" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_additem.xml" value="0.33" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_admin_allitem_view.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_admin_offer.xml" value="0.2833333333333333" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_adminpannel.xml" value="0.30085470085470084" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_cart.xml" value="0.5" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_cart.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_check_edit.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_contact_us.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_feedback_my.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_feedback_rating.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_itemdetview.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_login.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_mainch.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_offers.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_register.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_retrive_datac.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/activity_view_offer.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/admin_offer_list.xml" value="0.30085470085470084" />
@@ -18,12 +27,16 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/custom_toolbar.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/custom_toolbar_cart.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/custom_toolbar_offers.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/custom_toolbar_reviews.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/feedback_my_card.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/feedback_view.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/feedback_view_card.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/fragment_allitemview.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/fragment_bottom_nav.xml" value="0.5" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/itemview.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/list_item.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/offer_list.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/FOSMAD/app/src/main/res/layout/uppdate_debug.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/Yasit/AndroidStudioProjects/FOSMAD2/app/src/main/res/drawable/additemadmin.xml" value="0.2" />
         <entry key="..\:/Users/Yasit/AndroidStudioProjects/FOSMAD2/app/src/main/res/drawable/buttonnormal.xml" value="0.1390625" />
         <entry key="..\:/Users/Yasit/AndroidStudioProjects/FOSMAD2/app/src/main/res/drawable/forminsert.xml" value="0.1390625" />
