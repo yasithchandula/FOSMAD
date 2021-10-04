@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,7 +29,9 @@ public class CartActivity extends AppCompatActivity {
     TextView total_tv, subtotal;
 
     DatabaseReference DbRef;
+    FirebaseAuth firebaseAuth;
     Button chekout;
+    String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +49,11 @@ public class CartActivity extends AppCompatActivity {
         chekout=findViewById(R.id.btn_checkout);
 
 
-        DbRef = FirebaseDatabase.getInstance().getReference("Cart/User/Items");
+        firebaseAuth=FirebaseAuth.getInstance();
+
+        userID = firebaseAuth.getCurrentUser().getUid();
+        DbRef = FirebaseDatabase.getInstance().getReference("Cart").child(userID);
+
 
         DbRef.addValueEventListener(new ValueEventListener() {
             @SuppressLint("SetTextI18n")
@@ -58,6 +65,7 @@ public class CartActivity extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     CartItems cartList = dataSnapshot.getValue(CartItems.class);
                     cartList.setItemKey(dataSnapshot.getKey());
+                    System.out.println(cartList.getProductPrice());
                     total = total + (cartList.getProductPrice() * cartList.getProductQty());
                     CList.add(cartList);
                 }

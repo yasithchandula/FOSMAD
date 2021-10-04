@@ -51,7 +51,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         Glide.with(context).load(CList.get(position).getItemImage()).into(holder.productImage);
 
 
-
         String key = addCart.getItemKey();
 
         userID = firebaseAuth.getCurrentUser().getUid();

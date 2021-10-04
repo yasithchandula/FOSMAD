@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -47,6 +48,7 @@ public class OffersActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         DBref = FirebaseDatabase.getInstance().getReference("Offers");
+
 
         DBref.addValueEventListener(new ValueEventListener() {
             @Override

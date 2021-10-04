@@ -60,16 +60,14 @@ public class ViewOfferActivity extends AppCompatActivity {
                 if (firebaseAuth.getCurrentUser() != null) {
                     // Get the current user
                     userID = firebaseAuth.getCurrentUser().getUid();
-                    Dbref = FirebaseDatabase.getInstance().getReference().child("Cart").child(userID).child("Items");
+                    Dbref = FirebaseDatabase.getInstance().getReference().child("Cart").child(userID);
                     InsertData();
                     Toast.makeText(ViewOfferActivity.this, "Offer Added", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Toast.makeText(ViewOfferActivity.this, "Error", Toast.LENGTH_SHORT).show();
                 }
-
             }
-
 
         });
     }
