@@ -3,6 +3,7 @@ package com.example.fosmad;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -28,8 +30,8 @@ public class Feedback_Rating extends AppCompatActivity {
     EditText review;
     Button submit;
     RatingBar ratingBar;
-    float rateValue;
-    String temp, itemKey;
+    Float rateValue;
+    String temp, itemKey, userID;
 
 
     @Override
@@ -43,29 +45,38 @@ public class Feedback_Rating extends AppCompatActivity {
         submit = findViewById(R.id.submitBtn);
         showRating = findViewById(R.id.showRating);
         itemKey = getIntent().getExtras().getString("itemKey");
-        // Write a message to the database
 
-
+        try {
+            FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+            if (firebaseAuth.getCurrentUser() != null) {
+                // Get the current user
+                userID = firebaseAuth.getCurrentUser().getUid();
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
 
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
 
                 rateValue = ratingBar.getRating();
 
                 if (rateValue <= 1 && rateValue > 0)
-                    rateCount.setText("Bad " + rateValue + "/5");
+                    rateCount.setText(rateValue.toString());
                 else if (rateValue <= 2 && rateValue > 1)
-                    rateCount.setText("Ok " + rateValue + "/5");
+                    rateCount.setText(rateValue.toString());
                 else if (rateValue <= 3 && rateValue > 2)
-                    rateCount.setText("Good " + rateValue + "/5");
+                    rateCount.setText(rateValue.toString());
                 else if (rateValue <= 4 && rateValue > 3)
-                    rateCount.setText("Very Good " + rateValue + "/5");
+                    rateCount.setText(rateValue.toString());
                 else if (rateValue <= 5 && rateValue > 4)
-                    rateCount.setText("Best " + rateValue + "/5");
+                    rateCount.setText(rateValue.toString());
             }
         });
         submit.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 String rvw= review.getText().toString();
@@ -82,13 +93,11 @@ public class Feedback_Rating extends AppCompatActivity {
                 user.put("Rating", temp);
                 user.put("Review", rvw);
 
-
-                myRef.child(itemKey).push().setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                myRef.child(itemKey).child(userID).push().setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(Feedback_Rating.this, "Review added successfully!",
                                 Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), Feedback_View.class));
                         finish();
 
                     }
@@ -97,7 +106,6 @@ public class Feedback_Rating extends AppCompatActivity {
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(Feedback_Rating.this, "ERROR!",
                                 Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), Feedback_View.class));
                         finish();
                     }
                 });
