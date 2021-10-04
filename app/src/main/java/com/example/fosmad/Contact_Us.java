@@ -21,6 +21,7 @@ public class Contact_Us extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
 
+
         et_subject = findViewById(R.id.et_name);
         et_message = findViewById(R.id.et_message);
 
@@ -34,6 +35,7 @@ public class Contact_Us extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
@@ -75,8 +76,29 @@ public class AddOfferActivity extends AppCompatActivity {
         btn_publish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InsertOfferData();
 
+                String offerTitle = txt_title.getText().toString();
+                String offerPriceS = txt_price.getText().toString().trim();
+                String offerDescription = txt_description.getText().toString();
+
+                //InsertOfferData();
+                if(TextUtils.isEmpty(offerTitle)){
+                    txt_title.setError("Title is required!");
+                }
+                else if(TextUtils.isEmpty(offerPriceS)){
+                    txt_price.setError("Price is required!");
+                }
+                else if(TextUtils.isEmpty(offerDescription)){
+                    txt_description.setError("Description is required!");
+                }
+                else if(imageUri.equals(Uri.EMPTY)) {
+                    Toast.makeText(AddOfferActivity.this, "Main image required!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Float offerPrice = Float.valueOf(offerPriceS);
+                    offers = new Offers(offerTitle, offerPrice, offerDescription);
+                    uploadToFirebase(imageUri);
+                }
             }
         });
     }
@@ -91,17 +113,16 @@ public class AddOfferActivity extends AppCompatActivity {
 
         }
     }
-
-    private void InsertOfferData() {
-        String offerTitle = txt_title.getText().toString();
-        Float offerPrice = Float.valueOf(txt_price.getText().toString().trim());
-        String offerDescription = txt_description.getText().toString();
-
-        offers = new Offers(offerTitle, offerPrice, offerDescription);
-
-        uploadToFirebase(imageUri);
-
-    }
+//    private void InsertOfferData() {
+//        String offerTitle = txt_title.getText().toString();
+//        Float offerPrice = Float.valueOf(txt_price.getText().toString().trim());
+//        String offerDescription = txt_description.getText().toString();
+//
+//        offers = new Offers(offerTitle, offerPrice, offerDescription);
+//
+//        uploadToFirebase(imageUri);
+//
+//    }
 
     private void uploadToFirebase(Uri uri) {
 
@@ -143,3 +164,4 @@ public class AddOfferActivity extends AppCompatActivity {
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
     }
 }
+

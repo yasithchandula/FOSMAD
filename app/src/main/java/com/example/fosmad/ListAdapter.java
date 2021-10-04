@@ -30,15 +30,15 @@ public class ListAdapter extends ArrayAdapter {
         LayoutInflater inflater = mContext.getLayoutInflater();
         View listItemView = inflater.inflate(R.layout.list_item,null,true);
 //list details
-        TextView tName = listItemView.findViewById(R.id.tname);
-        TextView tAddress = listItemView.findViewById(R.id.taddress);
-        TextView tConNo = listItemView.findViewById(R.id.tConNo);
-
-        Member member= memberList.get(position);
-
-        tName.setText(member.getName());
-        tAddress.setText(member.getAddress());
-        tConNo.setText(member.getConNo());
+//        TextView tName = listItemView.findViewById(R.id.tname);
+//        TextView tAddress = listItemView.findViewById(R.id.taddress);
+//        TextView tConNo = listItemView.findViewById(R.id.tConNo);
+//
+//        Member member= memberList.get(position);
+//
+//        tName.setText(member.getName());
+//        tAddress.setText(member.getAddress());
+//        tConNo.setText(member.getConNo());
         return listItemView;
     }
 }

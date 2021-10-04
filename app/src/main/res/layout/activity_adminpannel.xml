@@ -116,6 +116,7 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_admin_add_offer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -148,6 +149,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_admin_view_offer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"

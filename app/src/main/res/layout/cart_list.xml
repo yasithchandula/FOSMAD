@@ -15,14 +15,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/img_item"
             android:layout_width="90dp"
             android:scaleType="centerCrop"
-            android:layout_height="wrap_content"
+            android:layout_height="90dp"
             android:layout_margin="5dp"
             android:src="@drawable/redbobo">
 
@@ -128,7 +128,7 @@
                     android:layout_width="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="125dp"
+                    android:layout_marginStart="110dp"
                     android:background="@drawable/ic_action_cart_delete_1"
                     app:backgroundTint="@null"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />

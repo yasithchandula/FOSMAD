@@ -56,6 +56,7 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
+
             <TextView
                 android:id="@+id/tv_cafebean"
                 android:layout_width="wrap_content"
@@ -79,6 +80,7 @@
                 android:textColor="@color/black"
                 android:textSize="12dp" />
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -99,6 +101,7 @@ With our humble beginnings at Cafe Bean Malabe, throughout these two years Cafe 
                 android:background="#E64A19"
                 app:srcCompat="@drawable/image1" />
 
+
             <TextView
                 android:id="@+id/tv_cafebean2"
                 android:layout_width="wrap_content"
@@ -108,6 +111,7 @@ With our humble beginnings at Cafe Bean Malabe, throughout these two years Cafe 
                 android:text="@string/tv_cafebean2"
                 android:textColor="@color/black"
                 android:textSize="12dp" />
+
 
 
         </LinearLayout>

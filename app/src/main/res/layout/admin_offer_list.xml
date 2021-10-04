@@ -53,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:textSize="15sp"
-                    android:layout_marginStart="260dp"
+                    android:layout_marginStart="235dp"
                     android:text="@string/tv_delete_offer"
                     android:textStyle="bold" />
 

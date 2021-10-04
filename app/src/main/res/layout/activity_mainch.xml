@@ -148,21 +148,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.959" />
 
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="148dp"
-        android:layout_height="60dp"
-        android:background="#F16767"
-        android:text="@string/edit"
-        android:textColor="#3E2723"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.378"
-        app:layout_constraintStart_toEndOf="@+id/SUBMIT"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.958"
-        app:rippleColor="#FBF5F5"
-        app:strokeColor="#F87D7D" />
+<!--    <Button-->
+<!--        android:id="@+id/edit"-->
+<!--        android:layout_width="148dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:background="#F16767"-->
+<!--        android:text="@string/edit"-->
+<!--        android:textColor="#3E2723"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.378"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/SUBMIT"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.958"-->
+<!--        app:rippleColor="#FBF5F5"-->
+<!--        app:strokeColor="#F87D7D" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
