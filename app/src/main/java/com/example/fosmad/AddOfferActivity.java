@@ -81,7 +81,6 @@ public class AddOfferActivity extends AppCompatActivity {
                 String offerPriceS = txt_price.getText().toString().trim();
                 String offerDescription = txt_description.getText().toString();
 
-                //InsertOfferData();
                 if(TextUtils.isEmpty(offerTitle)){
                     txt_title.setError("Title is required!");
                 }
@@ -113,17 +112,8 @@ public class AddOfferActivity extends AppCompatActivity {
 
         }
     }
-//    private void InsertOfferData() {
-//        String offerTitle = txt_title.getText().toString();
-//        Float offerPrice = Float.valueOf(txt_price.getText().toString().trim());
-//        String offerDescription = txt_description.getText().toString();
-//
-//        offers = new Offers(offerTitle, offerPrice, offerDescription);
-//
-//        uploadToFirebase(imageUri);
-//
-//    }
 
+//upload to firebase
     private void uploadToFirebase(Uri uri) {
 
         StorageReference fileRef = cafeSTRef.child(System.currentTimeMillis() + "." + getFileExtension(uri));

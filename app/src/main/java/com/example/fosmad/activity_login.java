@@ -93,7 +93,7 @@ public class activity_login extends AppCompatActivity {
 
                         }
                         else{
-                            Toast.makeText(activity_login.this, "USer logged", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(activity_login.this, "User Logged", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), home.class));
                         }
                     }

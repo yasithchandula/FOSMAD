@@ -65,7 +65,7 @@ public class CartActivity extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     CartItems cartList = dataSnapshot.getValue(CartItems.class);
                     cartList.setItemKey(dataSnapshot.getKey());
-                    System.out.println(cartList.getProductPrice());
+
                     total = total + (cartList.getProductPrice() * cartList.getProductQty());
                     CList.add(cartList);
                 }
@@ -75,7 +75,6 @@ public class CartActivity extends AppCompatActivity {
 
                 adapter.notifyDataSetChanged();
             }
-
 
 
             @Override

@@ -16,10 +16,12 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -37,6 +39,8 @@ public class home extends AppCompatActivity {
     Button cat_tea,cat_coffee,cat_juice,cat_smoothie,homenav;
     private String selectedfilter;
 
+    FirebaseAuth firebaseauth;
+
     BottomNavigationView bottomNavigationView;
     SearchView searchView;
 //    BottomNavigationView bmappbar;
@@ -51,8 +55,18 @@ public class home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        firebaseauth = FirebaseAuth.getInstance();
+// Check user login
+        if (firebaseauth.getCurrentUser() == null) {
+            Toast.makeText(home.this, "Please login first!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(), activity_login.class));
+            finish();
+        }
+
 
         recyclerView = findViewById(R.id.itemlist);
         database = FirebaseDatabase.getInstance().getReference("item");

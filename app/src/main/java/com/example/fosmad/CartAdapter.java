@@ -54,7 +54,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         String key = addCart.getItemKey();
 
         userID = firebaseAuth.getCurrentUser().getUid();
-        DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference().child("Cart").child(userID).child("Items").child(key);
+        DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference().child("Cart").child(userID).child(key);
 
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +63,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 databaseRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-
+//toast
                     }
                 });
 
@@ -93,6 +93,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 }
                 else {
                     Toast.makeText(context,"error",Toast.LENGTH_SHORT).show();
+                    //toast
                 }
 
             }

@@ -53,6 +53,7 @@ public class OffersActivity extends AppCompatActivity {
         DBref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                List.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Offers offer = dataSnapshot.getValue(Offers.class);
                     List.add(offer);
@@ -75,15 +76,8 @@ public class OffersActivity extends AppCompatActivity {
                     .setPositiveButton("Close", null).show();
         }
 
-
         bnv=(BottomNavigationView) findViewById(R.id.bottomnavview);
         bnv.setBackground(null);
-//        bnv.getMenu().getItem(R.id.deals).setChecked(true);
-//        bnv.setSelectedItemId(R.id.deals);
-
-
-
-
 
     }
 
@@ -93,8 +87,6 @@ public class OffersActivity extends AppCompatActivity {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
         if (connectivityManager != null) {
-
-
             if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 NetworkCapabilities capabilities = connectivityManager.getNetworkCapabilities(connectivityManager.getActiveNetwork());
                 if (capabilities != null) {
@@ -118,10 +110,8 @@ public class OffersActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
         bnv=(BottomNavigationView) findViewById(R.id.bottomnavview);
         bnv.setBackground(null);
-//        bnv.getMenu().getItem(R.id.deals).setChecked(true);
-//        bnv.setSelectedItemId(R.id.deals);
+
     }
 }
