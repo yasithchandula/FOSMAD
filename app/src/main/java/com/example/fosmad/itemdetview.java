@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -27,6 +28,8 @@ public class itemdetview extends AppCompatActivity {
 
     DatabaseReference Dbref;
     FirebaseAuth firebaseAuth;
+
+    BottomNavigationView bnv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,9 @@ public class itemdetview extends AppCompatActivity {
         reviews = findViewById(R.id.btn_view_reviews);
 
         addtocart = findViewById(R.id.btn_add_to_cart_item);
+
+        bnv=findViewById(R.id.bottomnavview);
+        bnv.setBackground(null);
 
 
 
