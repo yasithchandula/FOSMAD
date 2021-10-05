@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,6 +33,7 @@ public class CartActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     Button chekout;
     String userID;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,9 @@ public class CartActivity extends AppCompatActivity {
 
         userID = firebaseAuth.getCurrentUser().getUid();
         DbRef = FirebaseDatabase.getInstance().getReference("Cart").child(userID);
+
+        bottomNavigationView = findViewById(R.id.bottomnavview);
+        bottomNavigationView.setBackground(null);
 
 
         DbRef.addValueEventListener(new ValueEventListener() {

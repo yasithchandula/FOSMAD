@@ -126,7 +126,7 @@ public class itemadapter_admin extends RecyclerView.Adapter<itemadapter_admin.My
             super(itemView);
 
             name=itemView.findViewById(R.id.tv_itname);
-//            description=itemView.findViewById(R.id.tv_description);
+            //description=itemView.findViewById(R.id.tv_description);
             price=itemView.findViewById(R.id.tv_itprice);
             imageUrl1=itemView.findViewById(R.id.iv_itemimage);
             delbtn=itemView.findViewById(R.id.admin_del_btn);
